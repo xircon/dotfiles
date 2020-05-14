@@ -1,0 +1,1111 @@
+#+TITLE: Emacs Configuration
+#+AUTHOR: Steve Fisher
+#+EMAIL: xirconuk@gmail.com
+#+OPTIONS: num:nil
+#+STARTUP: showall
+
+* Do this first in case of fuck ups
+#+BEGIN_SRC emacs-lisp
+(message "Section 0")
+(add-to-list 'default-frame-alist '(background-color . "#000000"))
+(unless (package-installed-p 'use-package)
+    (package-refresh-contents)
+    (package-install 'use-package))
+
+(require 'use-package)
+
+(setq vc-follow-symlinks t)
+
+(setq warning-minimum-level :emergency)
+
+(add-to-list 'default-frame-alist '(fullscreen . maximized))
+
+(global-set-key (kbd "s-v") 'counsel-yank-pop)
+(global-unset-key (kbd "M-f"))
+(global-set-key (kbd "M-y") 'counsel-yank-pop)
+(global-set-key (kbd "C-r") 'counsel-recentf)
+(global-set-key (kbd "s-r") 'counsel-recentf)
+
+(global-unset-key (kbd "C-SPC"))
+(global-unset-key (kbd "C-@"))
+(global-set-key (kbd "C-SPC") 'ryo-modal-mode)
+(global-set-key (kbd "C-@") 'ryo-modal-mode)
+
+(global-unset-key (kbd "C-f"))
+(global-set-key (kbd "C-f")'swiper)
+
+(global-unset-key (kbd "C-q"))
+(global-set-key (kbd "C-q")'save-buffers-kill-terminal)
+
+(xterm-mouse-mode 1)
+
+(global-unset-key (vector (list 'shift 'left)))
+(global-unset-key (vector (list 'shift 'right)))
+(global-unset-key (vector (list 'shift 'up)))
+(global-unset-key (vector (list 'shift 'down)))
+
+(setq org-support-shift-select t)
+
+(set-frame-parameter nil 'alpha 100)
+
+(defun my-escape ()
+   "Quit in current context.
+    When there is an active minibuffer exit that.
+    Ignore quit command for keyboard macros. Otherwise
+    behave like `keyboad-quit'."
+    (interactive)
+    (if-let ((minibuffer (active-minibuffer-window)))
+        (with-current-buffer (window-buffer minibuffer)
+          (minibuffer-keyboard-quit))
+      ;; ignore quit for macros
+      (unless (or defining-kbd-macro executing-kbd-macro)
+        (keyboard-quit))))
+
+  ;; (when (fboundp 'my-escape)
+  ;;   (define-advice lsp-ui-doc--make-request (:around (foo))
+  ;;     (unless (eq this-command 'my-escape)
+  ;;     (funcall foo))))
+
+(global-set-key [remap keyboard-quit] #'my-escape)
+#+END_SRC
+
+* User info:
+#+BEGIN_SRC emacs-lisp
+(message "Section 1")
+(setq my-full-name "Steve Fisher")                 ; User full name
+(setq my-mail-address "xirconuk@gmail.com")   ; Email address
+
+(setq package-archives
+        '(("Elpa"     . "https://elpa.gnu.org/packages/")
+          ("Melpa Stable" . "https://stable.melpa.org/packages/")
+          ("Melpa"        . "https://melpa.org/packages/")
+          ("marmalade" . "http://marmalade-repo.org/packages/"))
+        package-archive-priorities
+        '(("MELPA Stable" . 10)
+          ("GNU ELPA"     . 5)
+          ("MELPA"        . 0)))
+#+END_SRC
+
+* Speed up startup
+#+BEGIN_SRC emacs-lisp
+(message "Section 2")
+(defvar default-file-name-handler-alist file-name-handler-alist)
+(setq file-name-handler-alist nil)
+(setq gc-cons-threshold 80000000)
+(add-hook 'emacs-startup-hook
+          (lambda ()
+            "Restore defalut values after init."
+            (setq file-name-handler-alist default-file-name-handler-alist)
+            (setq gc-cons-threshold 800000)
+            (add-hook 'focus-out-hook 'garbage-collect)))
+
+(setq inhibit-compacting-font-caches t) ; Don’t compact font caches during GC.
+#+END_SRC
+
+* Load path:
+#+BEGIN_SRC emacs-lisp
+(message "Section 3")
+
+(defun update-load-path (&rest _)
+  "Update `load-path'."
+  (push (expand-file-name "site-lisp" user-emacs-directory) load-path)
+  (push (expand-file-name "My-emacs" user-emacs-directory) load-path)
+  (push (expand-file-name "plugins" user-emacs-directory) load-path)
+  (push (expand-file-name "lisp" user-emacs-directory) load-path))
+
+;;(advice-add #'package-initialize :after #'update-load-path)
+(update-load-path)
+#+END_SRC
+
+* Environment:
+** Menus, Scroll bars, cursor colour and Yes/No handling:
+#+BEGIN_SRC emacs-lisp 
+;(add-hook 'kill-emacs-query-functions
+;          (lambda () (y-or-n-p "Do you really want to exit Emacs? "))
+;          'append)
+
+(set-cursor-color "yellow")
+
+;;(scroll-bar-mode 1)
+;;(tool-bar-mode -1)
+(fset 'yes-or-no-p 'y-or-n-p)
+(setq visible-bell t)
+(desktop-save-mode 1)
+    
+(use-package idle-highlight-mode
+       :ensure t)
+
+(require 'midnight)
+#+END_SRC 
+
+** Balance brackets:
+#+BEGIN_SRC emacs-lisp 
+(defun balance ()
+(interactive)
+(let* (
+     ($bracket-alist
+      '( (?“ . ?”) (?‹ . ?›) (?« . ?») (?【 . ?】) (?〖 . ?〗) (?〈 . ?〉) (?《 . ?》) (?「 . ?」) (?『 . ?』) (?{ . ?}) (?\[ . ?\]) (?\( . ?\))))
+     ;; regex string of all pairs to search.
+     ($bregex
+      (let (($tempList nil))
+        (mapc
+         (lambda (x)
+           (push (char-to-string (car x)) $tempList)
+           (push (char-to-string (cdr x)) $tempList))
+         $bracket-alist)
+        (regexp-opt $tempList )))
+     $p1
+     $p2
+     ;; each entry is a vector [char position]
+     ($stack '())
+     ($char nil)
+     $pos
+     $is-closing-char-p
+     $matched-open-char
+     )
+(if (region-active-p)
+    (setq $p1 (region-beginning) $p2 (region-end))
+  (setq $p1 (point-min) $p2 (point-max)))
+(save-restriction
+  (narrow-to-region $p1 $p2)
+  (progn
+    (goto-char 1)
+    (while (re-search-forward $bregex nil "move")
+      (setq $pos (point))
+      (setq $char (char-before))
+      (progn
+        (setq $is-closing-char-p (rassoc $char $bracket-alist))
+        (if $is-closing-char-p
+            (progn
+              (setq $matched-open-char
+                    (if $is-closing-char-p
+                        (car $is-closing-char-p)
+                      (error "logic error 64823. The char %s has no matching pair."
+                             (char-to-string $char))))
+              (if $stack
+                  (if (eq (aref (car $stack) 0) $matched-open-char )
+                      (pop $stack)
+                    (push (vector $char $pos) $stack ))
+                (progn
+                  (goto-char $pos)
+                  (error "First mismtach found. the char %s has no matching pair."
+                         (char-to-string $char)))))
+          (push (vector $char $pos) $stack ))))
+    (if $stack
+        (progn
+          (goto-char (aref (car $stack) 1))
+          (message "Mismtach found. The char %s has no matching pair." $stack))
+      (print "All brackets/quotes match."))))))
+#+END_SRC 
+    
+** Line numbers:
+#+BEGIN_SRC emacs-lisp 
+(global-linum-mode 1)
+(setq display-line-numbers-width-start 1)
+(setq display-line-numbers 'relative)
+
+;;; No line numbers in terminal
+(add-hook 'term-mode-hook (lambda () (linum-mode -1)))
+
+(size-indication-mode 1)
+#+END_SRC 
+
+** Set default mode:
+#+BEGIN_SRC emacs-lisp 
+(setq-default major-mode 'text-mode)
+#+END_SRC 
+
+** Keyboard & Mouse related:
+*** Unset C- and M- digit keys
+#+BEGIN_SRC emacs-lisp
+(dotimes (n 10)
+  (global-unset-key (kbd (format "C-%d" n)))
+  (global-unset-key (kbd (format "M-%d" n))))
+#+END_SRC 
+ 
+*** Load keybindings:
+#+BEGIN_SRC emacs-lisp 
+(require  'init-keybindings)
+(use-package key-chord
+      :ensure t)
+(load "/home/steve/.emacs.d/lisp/keychords-sc.el" 'noerror)
+(require 'init-fira-ligatures)
+#+END_SRC 
+ 
+*** Tab & Space: 
+#+BEGIN_SRC emacs-lisp 
+;; Permanently indent with spaces, never with TABs
+(setq-default c-basic-offset   4
+              tab-width        4
+              indent-tabs-mode nil)
+#+END_SRC 
+
+*** Parens:
+#+BEGIN_SRC emacs-lisp 
+;; Pretty parens:
+(add-hook 'prog-mode-hook #'rainbow-delimiters-mode)
+
+;; Highlight matching paren
+(use-package paren
+  :ensure nil
+  :hook (after-init . show-paren-mode)
+  :config
+  (setq show-paren-when-point-inside-paren t)
+  (setq show-paren-when-point-in-periphery t))
+
+;; Automatic parenthesis pairing
+(use-package elec-pair
+  :ensure nil
+  :hook (after-init . electric-pair-mode)
+  :init (setq electric-pair-inhibit-predicate 'electric-pair-conservative-inhibit))
+#+END_SRC 
+
+** Identations & highlight identations:
+#+BEGIN_SRC emacs-lisp 
+;; Highlight indentions
+(use-package highlight-indent-guides
+    :diminish
+    :hook (prog-mode . highlight-indent-guides-mode)
+    :config
+    (setq highlight-indent-guides-method 'character)
+    (setq highlight-indent-guides-responsive t))
+
+;; Load this seperately as it freaks check-parens
+;;(load "~/dotfiles/emacs.d/lisp/init-indent.el")
+#+END_SRC 
+
+** Spell checking:
+#+BEGIN_SRC emacs-lisp
+(use-package spell-fu)
+
+(global-spell-fu-mode)
+ 
+(use-package flyspell
+  :ensure nil
+  :diminish flyspell-mode
+  :if (executable-find "aspell")
+  :hook (((text-mode outline-mode) . flyspell-mode)
+         (prog-mode . flyspell-prog-mode)
+         (flyspell-mode . (lambda ()
+                            (unbind-key "C-;" flyspell-mode-map)
+                            (unbind-key "C-," flyspell-mode-map)
+                            (unbind-key "C-." flyspell-mode-map))))
+  :init
+  (setq flyspell-issue-message-flag nil)
+  (setq ispell-program-name "aspell")
+  (setq ispell-extra-args '("--sug-mode=ultra" "--lang=en_GB" "--run-together")))
+#+END_SRC 
+
+** Colourize colour names:
+#+BEGIN_SRC emacs-lisp 
+(use-package rainbow-mode
+  :diminish
+  :hook ((emacs-lisp-mode web-mode css-mode) . rainbow-mode))
+#+END_SRC 
+
+** Highlight TODO and similar keywords in comments and strings
+#+BEGIN_SRC emacs-lisp
+;; TODO BUG DEFECT ISSUE WORKAROUND
+(use-package hl-todo
+  :custom-face (hl-todo ((t (:box t :bold t))))
+  :bind (:map hl-todo-mode-map
+              ([C-f3] . hl-todo-occur)
+              ("C-c t p" . hl-todo-previous)
+              ("C-c t n" . hl-todo-next)
+              ("C-c t o" . hl-todo-occur))
+  :hook (after-init . global-hl-todo-mode)
+  :config
+  (dolist (keyword '("" "BUG" "DEFECT" "ISSUE"))
+    (cl-pushnew `(,keyword . "#cd5c5c") hl-todo-keyword-faces))
+    (cl-pushnew '("TODO" . "green") hl-todo-keyword-faces)
+    (cl-pushnew '("OBSOLETE" . "cyan") hl-todo-keyword-faces)
+    (cl-pushnew '("WORKAROUND" . "#d0bf8f") hl-todo-keyword-faces))
+#+END_SRC 
+ 
+** Copy & clipboard behaviour:
+#+BEGIN_SRC emacs-lisp 
+(setq  kill-do-not-save-duplicates 1)
+
+;; Keep selection highlighted after copy:
+(defadvice kill-ring-save (after keep-transient-mark-active ())
+"Override the deactivation of the mark."
+(setq deactivate-mark nil))
+
+(ad-activate 'kill-ring-save)
+
+;; Delete selection if you insert
+(use-package delsel
+  :ensure nil
+  :hook (after-init . delete-selection-mode))
+
+;; Rectangle
+(use-package rect
+  :ensure nil
+  :bind (("<C-return>" . rectangle-mark-mode)))
+
+;; Use system clipboard
+(setq x-select-enable-clipboard t)
+#+END_SRC 
+
+
+** Language/utf8 etc:
+#+BEGIN_SRC emacs-lisp
+(message "Section 4")
+(eval-when-compile
+   (require 'init-custom))
+
+;;; utf-8
+(set-language-environment 'utf-8)
+(setq locale-coding-system 'utf-8)
+(set-default-coding-systems 'utf-8)
+(set-terminal-coding-system 'utf-8)
+(set-selection-coding-system 'utf-8)
+(prefer-coding-system 'utf-8)
+(setq buffer-file-coding-system 'utf-8)
+(setq x-select-request-type '(UTF8_STRING COMOUND_TEXT TEXT STRING))
+
+;;; https://www.gnu.org/software/emacs/manual/html_node/emacs/Filesets.html
+(filesets-init)
+#+END_SRC 
+
+** Modeline:
+#+BEGIN_SRC emacs-lisp 
+;;Time and date in modeline
+(setq display-time-24hr-format t)
+(setq display-time-day-and-date t)
+(display-time)
+#+END_SRC 
+
+** Sudo-edit:
+#+BEGIN_SRC emacs-lisp 
+(use-package sudo-edit)
+(auto-sudoedit-mode 1)
+(use-package docker-tramp)
+(add-hook 'after-save-hook 'executable-make-buffer-file-executable-if-script-p)
+#+END_SRC 
+ 
+** Display icons everywhere:
+#+BEGIN_SRC emacs-lisp
+(use-package company-box
+  :hook (company-mode . company-box-mode)
+  :defer 0.5)
+ 
+(use-package all-the-icons :defer 0.5)
+
+(setq all-the-icons-ivy-file-commands
+          '(counsel-find-file counsel-file-jump counsel-recentf counsel-projectile-find-file counsel-projectile-find-dir))
+#+END_SRC 
+
+** Configuration of Terminal, shells, etc: 
+#+BEGIN_SRC emacs-lisp 
+;; Use zsh
+(setq explicit-shell-file-name "/bin/zsh")
+
+(defvar my-term-shell "/bin/zsh")
+
+(defadvice ansi-term (before force-bash)
+  (interactive (list my-term-shell)))
+
+(ad-activate 'ansi-term)
+
+(use-package vterm
+:ensure t)
+
+;; Don't whine if there is a terminal open.
+;; Do any keybindings and theme setup here
+  
+(defun set-no-process-query-on-exit ()
+      (let ((proc (get-buffer-process (current-buffer))))
+          (when (processp proc)
+          (set-process-query-on-exit-flag proc nil))))
+(add-hook 'term-exec-hook 'set-no-process-query-on-exit)
+#+END_SRC 
+
+** Org-Mode Configuration:
+#+BEGIN_SRC emacs-lisp 
+(require 'org)
+(define-key org-mode-map (kbd "C-e") nil)
+(define-key org-mode-map (kbd "C-j") nil)
+
+(add-hook 'org-mode-hook (lambda ()
+"Beautify Org Checkbox Symbol"
+    (push '("[ ]" .  "☐") prettify-symbols-alist)
+    (push '("[X]" . "☑" ) prettify-symbols-alist)
+    (push '("[-]" . "❍" ) prettify-symbols-alist)
+    (prettify-symbols-mode)))
+#+END_SRC
+
+* Calendar:
+#+BEGIN_SRC emacs-lisp
+(message "Section 5")
+(use-package calfw
+  :config
+   ;; Better display
+   (setq cfw:fchar-junction ?╋
+      cfw:fchar-vertical-line ?┃
+      cfw:fchar-horizontal-line ?━
+      cfw:fchar-left-junction ?┣
+      cfw:fchar-right-junction ?┫
+      cfw:fchar-top-junction ?┯
+      cfw:fchar-top-left-corner ?┏
+      cfw:fchar-top-right-corner ?┓)
+)
+
+(use-package calfw-gcal
+ :defer 0.5
+ :ensure t)
+
+(defun my-open-calendar () (interactive) 
+(cfw:open-calendar-buffer :contents-sources (list (cfw:org-create-source "Green") 
+;;(cfw:ical-create-source "Important" "https://calendar.google.com/calendar/ical/xirconuk%40gmail.com/public/basic.ics" "Red")
+(cfw:ical-create-source "Kerry    " "https://calendar.google.com/calendar/ical/sfmedusa%40gmail.com/public/basic.ics" "White")
+)))
+
+(global-set-key [f3] 'my-open-calendar)
+#+END_SRC
+
+* Spare section:
+#+BEGIN_SRC emacs-lisp
+(message "Section 6")
+(use-package eaf
+  :load-path "/usr/share/emacs/site-lisp/eaf" ;;if installed from AUR
+  :custom
+  (eaf-find-alternate-file-in-dired t)
+  :config
+  (eaf-bind-key scroll_up "C-n" eaf-pdf-viewer-keybinding)
+  (eaf-bind-key scroll_down "C-p" eaf-pdf-viewer-keybinding)
+  (eaf-bind-key take_photo "p" eaf-camera-keybinding))
+#+END_SRC
+
+* Buffer-Expose:
+This must be loaded before files are loaded as init-my-ryo.el calls it.
+#+BEGIN_SRC emacs-lisp
+;;; Must be done before load files.
+(message "Section 7")
+;;; =======================================================================================
+;;; https://github.com/clemera/buffer-expose
+;;; =======================================================================================
+(defvar buffer-expose-mode-map
+(let ((map (make-sparse-keymap)))
+(define-key map (kbd "<s-tab>") 'buffer-expose)
+(define-key map (kbd "<C-tab>") 'buffer-expose-no-stars)
+(define-key map (kbd "C-c <C-tab>") 'buffer-expose-current-mode)
+(define-key map (kbd "C-c C-d") 'buffer-expose-dired-buffers)
+map)
+"Mode map for `buffer-expose-mode'.")
+
+;; =============================
+;; Custom buffer expose modes:
+;; =============================
+(defun my-expose-python-buffers (&optional max)
+  (interactive "P")
+  (buffer-expose-major-mode max 'python-mode))
+
+(defun my-expose-lisp-buffers (&optional max)
+  (interactive "P")
+  (buffer-expose-major-mode max 'emacs-lisp-mode))
+#+END_SRC
+
+* Load My Files:
+#+BEGIN_SRC emacs-lisp
+(message "Section 8")
+
+;;(require 'init-email) ;;; My Email settings.
+(require 'init-my-tabbar) ;;; My tabbar.
+  
+(load "/home/steve/.emacs.d/functions.el")
+(require 'init-my-ryo)
+(ryo-modal-mode 0)
+(set-background-color "#000000")
+
+(if (ryo-modal-mode 1)
+       (ryo-off))
+(message "Section 8a")
+
+#+END_SRC
+
+* Theme and Appearance:
+#+BEGIN_SRC emacs-lisp
+(message "Section 9")
+
+(setq custom-theme-directory "~/.emacs.d/themes")
+
+(use-package abyss-theme
+     :ensure t
+     :config (load-theme 'abyss t))
+
+(load-theme 'abyss t)
+(global-hl-line-mode +1) 
+(set-face-background 'region "DarkOrchid1")
+(set-face-foreground 'mode-line "#4477aa")
+(set-face-background 'mode-line "#101010")
+(set-face-foreground 'font-lock-comment-face  "Purple")
+(set-face-background 'font-lock-comment-face  "gray10")
+(set-face-attribute 'font-lock-comment-face nil :bold t)
+(require 'color)
+#+END_SRC
+
+* Packages
+** Scrolling:
+#+BEGIN_SRC emacs-lisp 
+(require 'smooth-scrolling)
+
+(setq redisplay-dont-pause t
+  scroll-margin 1
+  scroll-step 1
+  scroll-conservatively 10000
+  scroll-preserve-screen-position 1)
+#+END_SRC 
+ 
+** Benchmark:
+;;#+BEGIN_SRC emacs-lisp 
+(use-package benchmark-init
+  :ensure t
+  :config
+  ;; To disable collection of benchmark data after init is done.
+  (add-hook 'after-init-hook 'benchmark-init/deactivate))
+;;#+END_SRC 
+ 
+** Easy Kill:
+#+BEGIN_SRC emacs-lisp
+(message "Section 10")
+(use-package easy-kill
+    :ensure t
+    :defer
+    :config
+    (global-set-key [remap kill-ring-save] #'easy-kill)
+    (global-set-key [remap cua-copy-region] #'easy-kill)
+    (global-set-key [remap mark-sexp] #'easy-mark))
+
+(setq x-select-enable-clipboard t)
+(setq save-interprogram-paste-before-kill t)
+#+END_SRC
+
+** Undo-fu-session:
+#+BEGIN_SRC emacs-lisp 
+(use-package undo-fu-session
+  :config
+  (setq undo-fu-session-incompatible-files '("COMMIT_EDITMSG$" "git-rebase-todo$")))
+
+(global-undo-fu-session-mode)
+#+END_SRC 
+
+** Abbrev Mode:
+#+BEGIN_SRC emacs-lisp
+(setq-default abbrev-mode t)
+(setq abbrev-file-name "~/.emacs.d/abbrev_defs")    ;; definitions from...
+(setq save-abbrevs 'silently)      ;; save abbrevs when files are saved
+
+(defun create-abbrev ()
+  (interactive)
+  (setq current-prefix-arg '(0)) ; C-u
+  (call-interactively 'add-global-abbrev))
+
+(global-set-key (kbd "H-y") 'create-abbrev)
+#+END_SRC
+
+** Persistent Scratch:
+#+BEGIN_SRC emacs-lisp 
+(use-package persistent-scratch
+  :preface
+  (defun my-save-buffer ()
+    "Save scratch and other buffer."
+    (interactive)
+    (let ((scratch-name "*scratch*"))
+      (if (string-equal (buffer-name) scratch-name)
+          (progn
+            (message "Saving %s..." scratch-name)
+            (persistent-scratch-save)
+            (message "Wrote %s" scratch-name))
+        (save-buffer))))
+  :hook (after-init . persistent-scratch-setup-default)
+  :bind (:map lisp-interaction-mode-map
+              ("C-x C-s" . my-save-buffer)))
+#+END_SRC 
+
+** Discover key bindings and their meaning for the current Emacs major mode
+#+BEGIN_SRC emacs-lisp 
+(use-package discover-my-major
+  :bind (("C-h M-m" . discover-my-major)
+         ("C-h M-M" . discover-my-mode)))
+#+END_SRC 
+ 
+** Eyebrowse mode (AKA Virtual desktops):
+#+BEGIN_SRC emacs-lisp
+(use-package eyebrowse
+  :diminish eyebrowse-mode
+  :config (progn
+            (define-key eyebrowse-mode-map (kbd "M-1") 'eyebrowse-switch-to-window-config-1)
+            (define-key eyebrowse-mode-map (kbd "M-2") 'eyebrowse-switch-to-window-config-2)
+            (define-key eyebrowse-mode-map (kbd "M-3") 'eyebrowse-switch-to-window-config-3)
+            (define-key eyebrowse-mode-map (kbd "M-4") 'eyebrowse-switch-to-window-config-4)
+            (eyebrowse-mode t)
+            (setq eyebrowse-new-workspace t)))
+
+(eyebrowse-mode t)
+#+END_SRC
+
+** History:
+#+BEGIN_SRC emacs-lisp
+(require 'redo+)
+(global-set-key (kbd "C-?") 'redo)
+
+(setq undo-tree-auto-save-history 1)
+
+(auto-fill-mode -1)
+
+(use-package saveplace
+  :ensure nil
+  :hook (after-init . save-place-mode))
+
+(use-package savehist
+  :ensure nil
+  :hook (after-init . savehist-mode)
+  :init (setq enable-recursive-minibuffers t ; Allow commands in minibuffers
+              history-length 1000
+              savehist-additional-variables '(mark-ring
+                                              global-mark-ring
+                                              search-ring
+                                              regexp-search-ring
+                                              extended-command-history)
+              savehist-autosave-interval 60))
+(setq savehist-save-minibuffer-history t)
+(setq savehist-additional-variables
+      '(kill-ring
+        search-ring
+        regexp-search-ring
+        last-kbd-macro
+        kmacro-ring
+        shell-command-history
+        Info-history-list
+        register-alist))
+(savehist-mode t)
+#+END_SRC
+
+** Recentf:
+#+BEGIN_SRC emacs-lisp
+(require 'recentf)
+(recentf-mode 1)
+(setq recentf-max-menu-items 50)
+(global-set-key "\C-x\ \C-r" 'recentf-open-files)
+#+END_SRC
+
+** Quickrun
+#+BEGIN_SRC emacs-lisp
+(require 'quickrun) 
+(setq quickrun-timeout-seconds nil)
+#+END_SRC 
+
+** Start Server:
+#+BEGIN_SRC emacs-lisp
+  ;Start server
+;; Start server (but don't restart).
+(require 'server)
+(unless (server-running-p)
+  (server-start))
+
+;; (use-package server
+;; :ensure nil
+;; :hook (after-init . server-mode))
+#+END_SRC
+
+** Miscellaneous packages:
+#+BEGIN_SRC emacs-lisp
+(use-package copyit)                    ; copy path, url, etc.
+;;(use-package daemons)                   ; system services/daemons
+(use-package diffview)                  ; side-by-side diff view
+(use-package esup)                      ; Emacs startup profiler
+(use-package htmlize)                   ; covert to html
+;;(use-package list-environment)
+;;(use-package memory-usage)
+;;(use-package ztree)                     ; text mode directory tree. Similar with beyond compare
+#+END_SRC 
+
+** Search tools: `wgrep', `ag' and `rg' 
+#+BEGIN_SRC emacs-lisp 
+
+(use-package wgrep
+  :init
+  (setq wgrep-auto-save-buffer t)
+  (setq wgrep-change-readonly-file t))
+
+(use-package ag
+  :defines projectile-command-map
+  :init
+  (with-eval-after-load 'projectile
+    (bind-key "s S" #'ag-project projectile-command-map))
+  :config
+  (setq ag-highlight-search t)
+  (setq ag-reuse-buffers t)
+  (setq ag-reuse-window t)
+  (use-package wgrep-ag))
+
+(use-package rg
+  :hook (after-init . rg-enable-default-bindings)
+  :config
+  (setq rg-group-result t)
+  (setq rg-show-columns t)
+
+  (cl-pushnew '("tmpl" . "*.tmpl") rg-custom-type-aliases)
+
+  (with-eval-after-load 'projectile
+    (defalias 'projectile-ripgrep 'rg-project)
+    (bind-key "s R" #'rg-project projectile-command-map))
+
+  (when (fboundp 'ag)
+    (bind-key "a" #'ag rg-global-map))
+
+  (with-eval-after-load 'counsel
+    (bind-keys :map rg-global-map
+               ("c r" . counsel-rg)
+               ("c s" . counsel-ag)
+               ("c p" . counsel-pt)
+               ("c f" . counsel-fzf))))
+#+END_SRC 
+
+** Which-key:
+#+BEGIN_SRC emacs-lisp 
+;; Display available keybindings in popup
+(use-package which-key
+     :diminish which-key-mode
+     :defer 10
+     :bind (:map help-map ("C-h" . which-key-C-h-dispatch))
+     :hook (after-init . which-key-mode))
+#+END_SRC 
+ 
+** Posframe:
+Also see hydra section for hydra-posframe initialization:
+#+BEGIN_SRC emacs-lisp 
+(require 'ivy-posframe)
+    ;; display at `ivy-posframe-style'
+    (setq ivy-posframe-display-functions-alist '((t . ivy-posframe-display)))
+    (setq ivy-posframe-display-functions-alist '((t . ivy-posframe-display-at-frame-center)))
+    ;; (setq ivy-posframe-display-functions-alist '((t . ivy-posframe-display-at-window-center)))
+    ;; (setq ivy-posframe-display-functions-alist '((t . ivy-posframe-display-at-frame-bottom-left)))
+    ;; (setq ivy-posframe-display-functions-alist '((t . ivy-posframe-display-at-window-bottom-left)))
+    (set-face-attribute 'ivy-posframe nil :foreground "white" :background "DarkSlateBlue")
+    (ivy-posframe-mode 1)
+    
+;;Which-key posframe:
+(setq which-key-posframe-poshandler 'posframe-poshandler-window-center)
+(which-key-posframe-mode)
+(define-key ivy-minibuffer-map (kbd "C-f") 'ivy-next-line-or-history)
+#+END_SRC 
+
+** The rest:
+#+BEGIN_SRC emacs-lisp
+(require 'init-package)
+(require 'imdb)
+;;(require 'raven)
+;;(require 'ipinfo)
+(require 'savekill)
+
+(use-package minions
+  :config (minions-mode 1))
+(minions-mode 1)
+#+END_SRC
+
+* Preferences - Load Centaur files:
+
+#+BEGIN_SRC emacs-lisp
+(message "Section 11")
+
+(require 'init-ivy)
+(setq ivy-sort-matches-functions-alist '((t . nil)
+                                       (ivy-switch-buffer . ivy-sort-function-buffer)
+                                       (counsel-find-file . ivy-sort-function-buffer)))
+
+(setq ivy-use-selectable-prompt t)
+(setq ivy-display-style 'fancy)
+;;(setq counsel-find-file-ignore-regexp "\.~undo-tree~\#\(?:\‘[#.]\)\|\(?:[#~]\’\)")
+(setq counsel-find-file-ignore-regexp
+        (concat
+         ;; File names beginning with # or .
+         "\\(?:\\`[#.]\\)"
+         ;; File names ending with # or ~
+         "\\|\\(?:\\`.+?[#~]\\'\\)"))
+
+
+;;(require 'init-window)
+
+;;(require 'init-eshell)
+
+;;(require 'init-shell)
+  
+(require 'init-markdown)
+
+(require 'init-org)
+#+END_SRC
+
+* Company Mode:
+#+BEGIN_SRC emacs-lisp 
+(use-package company
+  :diminish company-mode
+  :defines (company-dabbrev-ignore-case company-dabbrev-downcase)
+  :preface
+  :bind (("M-/" . company-complete)
+          :map company-active-map
+         ("C-p" . company-select-previous)
+         ("C-n" . company-select-next)
+         ("TAB" . company-complete-common-or-cycle)
+         ("<tab>" . company-complete-common-or-cycle)
+         ("S-TAB" . company-select-previous)
+         ("<backtab>" . company-select-previous)
+         :map company-search-map
+         ("C-p" . company-select-previous)
+         ("C-n" . company-select-next))
+  :hook (after-init . global-company-mode)
+  :config
+  (setq company-tooltip-align-annotations t ; aligns annotation to the right
+        company-tooltip-limit 12            ; bigger popup window
+        company-idle-delay .2               ; decrease delay before autocompletion popup shows
+        company-echo-delay 0                ; remove annoying blinking
+        company-minimum-prefix-length 2
+        company-require-match nil
+        company-dabbrev-ignore-case nil
+        company-dabbrev-downcase nil)
+
+  ;; Popup documentation for completion candidates
+    (use-package company-quickhelp
+      :bind (:map company-active-map
+                  ("M-h" . company-quickhelp-manual-begin))
+      :hook (global-company-mode . company-quickhelp-mode)
+      :config (setq company-quickhelp-delay 0.8)))
+
+  ;; Support yas in commpany
+  ;; Note: Must be the last to involve all backends
+  ;(setq company-backends (mapcar #'company-backend-with-yas company-backends))
+#+END_SRC 
+ 
+* Hydras
+#+BEGIN_SRC emacs-lisp
+(message "Section 12")
+
+(use-package hydra-posframe
+      :load-path "~/.emacs.d/lisp/"
+      :hook (after-init . hydra-posframe-enable)
+      :custom-face (hydra-posframe-face ((t (:background "DarkSlateBlue"))))
+      :custom-face (hydra-posframe-border-face ((t (:background "DarkBlue")))))
+
+      (defhydra hydra-eledit-conf (:color red :hint nil)
+
+        "Edit config files"
+        ("i"  (find-file "~/.emacs.d/init.el") "init.el" :color blue)
+        ("c"  (find-file "~/.emacs.d/custom-post.el") "custom-post.el" :color blue)
+        ("f"  (find-file "~/.emacs.d/My-emacs/functions.el") "functions.el" :color blue)
+        ("o"  (find-file "~/.emacs.d/config.org") "config.org" :color blue)
+        ("p"  (find-file "~/.emacs.d/config-term.org") "config-term.org" :color blue)
+        ("s"  (find-file "~/.emacs.d/My-emacs/hyper-sc.el") "hyper-sc.el" :color blue)
+        ("k"  (find-file "~/.emacs.d/My-emacs/keychords-sc.el") "keychords.el" :color blue)
+        ("q"   quit-window "quit" :color blue))
+
+        (global-set-key (kbd "C-c n") #'hydra-eledit-conf/body)
+
+        (defhydra hydra-edit-conf (:color red
+                                               :hint nil)
+        "Edit: "
+        ("p"  (find-file (concat "/sudo::" "/etc/pacman.conf")) "pacman" :color blue)
+        ("m"  (find-file (concat "/sudo::" "/etc/pacman-mirrors.conf")) "mirrors" :color blue)
+        ("f"  (find-file (concat "/sudo::" "/etc/fstab")) "fstab" :color blue)
+        ("s"  (find-file (concat "/sudo::" "/etc/sddm.conf")) "sddm" :color blue)
+        ("g"  (find-file (concat "/sudo::" "/etc/default/grub")) "grub" :color blue)
+        ("t"  (find-file "~/.config/termite/config") "Termite" :color blue)
+        ("x"  (find-file "~/.Xmodmap") "Xmodmap" :color blue)
+        ("y"  (find-file "~/.config/yay/config.json") "yay" :color blue)
+        ("z"  (find-file "~/.zshrc") "zsh" :color blue)
+        ("q"   quit-window "quit" :color blue))
+
+        (global-set-key (kbd "C-c m") #'hydra-edit-conf/body)
+
+    (require 'backup-each-save)
+        (add-hook 'after-save-hook 'backup-each-save)
+        (defun backup-each-save-filter (filename)
+          (let ((ignored-filenames
+             '("^/tmp" "semantic.cache$" "\\.emacs-places$"
+               "\\.recentf$" ".newsrc\\(\\.eld\\)?"))
+            (matched-ignored-filename nil))
+            (mapc
+             (lambda (x)
+               (when (string-match x filename)
+             (setq matched-ignored-filename t)))
+             ignored-filenames)
+            (not matched-ignored-filename)))
+        (setq backup-each-save-filter-function 'backup-each-save-filter)
+#+END_SRC
+
+* Sidebars
+#+BEGIN_SRC emacs-lisp
+(message "Section 13")
+(require 'neotree)
+(global-set-key [f8] 'neotree-toggle)
+(setq neo-smart-open t)
+
+(require 'sr-speedbar)
+(global-set-key (kbd "<f11>") 'sr-speedbar-toggle)
+(setq sr-speedbar-right-side nil)
+(setq speedbar-initial-expansion-list-name "buffers")
+
+(use-package dired-sidebar
+    :bind (("<f7>" . dired-sidebar-toggle-sidebar))
+    :ensure t
+    :commands (dired-sidebar-toggle-sidebar)
+    :init
+    (add-hook 'dired-sidebar-mode-hook
+              (lambda ()
+                (unless (file-remote-p default-directory)
+                  (auto-revert-mode))))
+    :config
+    (push 'toggle-window-split dired-sidebar-toggle-hidden-commands)
+    (push 'rotate-windows dired-sidebar-toggle-hidden-commands)
+
+    (setq dired-sidebar-subtree-line-prefix "__")
+    ;;(setq dired-sidebar-theme 'vscode)
+    (setq dired-sidebar-use-term-integration t)
+    (setq dired-sidebar-use-custom-font t))
+
+  (defun my-dired-mode-hook ()
+    "My `dired' mode hook."
+    ;; To hide dot-files by default
+    (dired-hide-dotfiles-mode)
+
+    ;; To toggle hiding
+    (define-key dired-mode-map "." #'dired-hide-dotfiles-mode))
+
+  (add-hook 'dired-mode-hook #'my-dired-mode-hook)
+#+END_SRC
+
+* Programming
+** Python:
+#+BEGIN_SRC emacs-lisp
+(defun my/python-mode-hook ()
+  (add-to-list 'company-backends 'company-jedi))
+
+(add-hook 'python-mode-hook 'my/python-mode-hook)
+(require 'init-python)
+#+END_SRC
+
+** Magit
+#+BEGIN_SRC emacs-lisp
+(global-set-key (kbd "C-x g") 'magit-status)
+#+END_SRC
+
+** Flycheck mode:
+#+BEGIN_SRC emacs-lisp 
+  (use-package flycheck
+    :diminish flycheck-mode
+    :hook (after-init . global-flycheck-mode)
+    :config
+    (setq flycheck-indication-mode 'right-fringe)
+    (setq flycheck-emacs-lisp-load-path 'inherit))
+
+    ;; Only check while saving and opening files
+    (setq flycheck-check-syntax-automatically '(save mode-enabled))
+
+    ;; ;; Display Flycheck errors in GUI tooltips
+    ;; (if (display-graphic-p)
+    ;;     (use-package flycheck-pos-tip
+    ;;       :hook (global-flycheck-mode . flycheck-pos-tip-mode)
+    ;;       :config (setq flycheck-pos-tip-timeout 30))
+    ;;   (use-package flycheck-popup-tip
+    ;;     :hook (global-flycheck-mode . flycheck-popup-tip-mode)))
+
+    ;; Jump to and fix syntax errors via `avy'
+    (use-package avy-flycheck
+      :hook (global-flycheck-mode . avy-flycheck-setup))
+
+  (use-package flycheck-posframe
+    :ensure t
+    :after flycheck
+    :config (add-hook 'flycheck-mode-hook #'flycheck-posframe-mode)
+    :custom-face (flycheck-posframe-error-face ((t (:background "Red"))))
+    :custom-face (flycheck-posframe-warning-face ((t (:background "DarkBlue"))))
+    :custom-face (flycheck-posframe-border-face ((t (:background "DarkBlue")))))
+
+  ;; (flycheck-posframe-warning-face ((t "Black")))
+  ;;(set-face-attribute 'flycheck-posframe-warning-face "Black")
+  (setq flycheck-posframe-warning-face "black")
+
+  (flycheck-posframe-mode 1)
+#+END_SRC 
+ 
+** Miscellaneous Programming:
+#+BEGIN_SRC emacs-lisp
+  (message "Section 14")
+  ;;(require 'init-projectile)
+  ;;(require 'init-lsp)
+  (require 'init-emacs-lisp)
+#+END_SRC
+
+* Spare section:
+#+BEGIN_SRC emacs-lisp
+     (message "Section 15")
+
+     (bind-key "C-s" (kbd "C-x C-s")  key-translation-map
+               (and
+                  ;; keys have to be at "toplevel" not in a middle of
+                  ;;a key sequence
+                  (equal (this-command-keys-vector)
+                         (vector last-input-event))
+                  (or
+                   ;; in general not when key is read within another command
+                   ;; only for interactive toplevel use
+                   (not this-command)
+                   ;; but do translate for describe key commands
+                   ;; which should show info for translated key
+                   ;; that actual gets triggered when the command
+                   ;; is called for real
+                   (memq this-command my-translate-cmds))))
+
+     (bind-key "C-o" (kbd "C-x C-f")  key-translation-map
+               (and
+                  ;; keys have to be at "toplevel" not in a middle of
+                  ;;a key sequence
+                  (equal (this-command-keys-vector)
+                         (vector last-input-event))
+                  (or
+                   ;; in general not when key is read within another command
+                   ;; only for interactive toplevel use
+                   (not this-command)
+                   ;; but do translate for describe key commands
+                   ;; which should show info for translated key
+                   ;; that actual gets triggered when the command
+                   ;; is called for real
+                   (memq this-command my-translate-cmds))))
+#+END_SRC
+* Opacity:
+#+BEGIN_SRC emacs-lisp
+(defun opacity-modify (&optional dec)
+"modify the transparency of the emacs frame; if DEC is t, decrease the transparency, otherwise increase it in 10%-steps"
+  (let* ((alpha-or-nil (frame-parameter nil 'alpha)) ; nil before setting
+         (oldalpha (if alpha-or-nil alpha-or-nil 100))
+         (newalpha (if dec (- oldalpha 10) (+ oldalpha 10))))
+    (when (and (>= newalpha frame-alpha-lower-limit) (<= newalpha 100))
+      (modify-frame-parameters nil (list (cons 'alpha newalpha))))))
+
+;; C-8 will increase opacity (== decrease transparency)
+;; C-9 will decrease opacity (== increase transparency)
+;; C-0 will returns the state to normal
+(global-unset-key (kbd "C-8"))
+(global-unset-key (kbd "C-9"))
+(global-unset-key (kbd "C-0"))
+(global-set-key (kbd "C-8") '(lambda()(interactive)(opacity-modify)))
+(global-set-key (kbd "C-9") '(lambda()(interactive)(opacity-modify t)))
+(global-set-key (kbd "C-0") '(lambda()(interactive)
+                               (modify-frame-parameters nil `((alpha . 100)))))
+#+END_SRC
+           
+* Last thing:
+#+BEGIN_SRC emacs-lisp
+(message "Section 16")
+(global-unset-key (vector (list 'shift 'left)))
+(global-unset-key (vector (list 'shift 'right)))
+(global-unset-key (vector (list 'shift 'up)))
+(global-unset-key (vector (list 'shift 'down)))
+(global-whitespace-mode 0)
+(whitespace-mode 0)
+(ryo-modal-mode 0)
+(message "Section Background set?")
+(set-background-color "#000000")
+;(timed-updater)
+(message "^^^")
+#+END_SRC
