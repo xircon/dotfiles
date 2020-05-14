@@ -1,0 +1,30 @@
+! Unmap capslock
+clear Lock
+keycode 135 = End
+!keycode 108 = Multi_key
+keycode 108 = Home
+!keycode 108 = Hyper_L
+
+! Leave mod4 as windows key _only_
+
+clear mod3 
+clear mod4 
+add mod3 = Hyper_L 
+add mod4 = Super_L Super_R
+!remove mod4 = Hyper_L
+
+!add mod5 = Hyper_L
+
+keycode 65 = Hyper_L
+keycode any = space
+
+!remove Lock = Caps_Lock
+!keysym Caps_Lock = Control_L
+!add Control = Control_L
+
+!remove Control = Control_L
+!keysym Control_L = Caps_Lock
+!keysym Caps_Lock = Control_L
+!add Lock = Caps_Lock
+!add Control = Control_L
+!clear lock
