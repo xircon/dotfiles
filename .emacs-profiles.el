@@ -1,0 +1,6 @@
+;(("default" . ((user-emacs-directory . "~/dotfiles/emacs.d")))
+; ("doom" . ((user-emacs-directory . "~/.doom")))
+; ("prelude" . ((user-emacs-directory . "~/dotfiles/prelude"))))
+(("default" . ((user-emacs-directory . "~/.emacs.d")))
+ ("doom" . ((user-emacs-directory . "~/.doom")))
+ ("spacemacs" . ((user-emacs-directory . "~/.spacemacs"))))
