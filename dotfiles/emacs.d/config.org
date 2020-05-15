@@ -218,6 +218,7 @@
 ** Keyboard & Mouse related:
 *** Unset C- and M- digit keys
 #+BEGIN_SRC emacs-lisp
+(setq mouse-autoselect-window t)
 (dotimes (n 10)
   (global-unset-key (kbd (format "C-%d" n)))
   (global-unset-key (kbd (format "M-%d" n))))
