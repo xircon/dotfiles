@@ -9,9 +9,10 @@ sleep 2
 xmodmap ~/.Xmodmap
 
 xcape -e "Hyper_L=space" &
-xcape -e "Alt_L=Super_L|Y" &
+xcape -e "Alt_L=Hyper_L|Y" &
 xcape -e "Shift_L=Super_L|F" &
 xcape -e "Shift_R=Super_L|D" &
 xcape -e "Control_L=Super_L|t" &
 sleep 1
 pgrep -c xcape
+xmodmap ~/.Xmodmap

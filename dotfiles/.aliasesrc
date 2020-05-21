@@ -29,6 +29,7 @@ opp() {
 }
 
 alias cat=bat
+alias ecat="mm "
 alias catp="bat --plain"
 alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
@@ -177,7 +178,7 @@ alias zshc="cd ~ && e .zshrc && unalias -m '*' && source ~/.zshrc"
 alias ee='emacs $*' 
 
 aliases(){
-    emacsclient -c ~/.aliasesrc
+    emacsclient -c ~/.aliasesrc&
     #unalias -m '*'
     source ~/.aliasesrc
 }
