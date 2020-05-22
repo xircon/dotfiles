@@ -1,0 +1,34 @@
+[DownloadDialog Settings]
+Height 900=550
+Width 1600=800
+
+[LatteSettingsDialog]
+downloadWindowSize=800,550
+windowSize=700,574
+
+[LatteSettingsDialog][TabLayouts]
+columnWidths=59,84,96,0
+sortColumn=3
+sortOrder=0
+
+[PlasmaRunnerManager]
+LaunchCounts=
+
+[PlasmaThemeExtended]
+outlineWidth=1
+
+[ScreenConnectors]
+10=eDP-1
+
+[UniversalSettings]
+badges3DStyle=false
+canDisableBorders=false
+currentLayout=Aeolian-20200502135732
+lastNonAssignedLayout=Aeolian-20200502135732
+launchers=
+memoryUsage=0
+metaPressAndHoldEnabled=true
+mouseSensitivity=2
+screenTrackerInterval=2500
+showInfoWindow=true
+version=2

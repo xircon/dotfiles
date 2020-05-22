@@ -1,0 +1,7 @@
+[KFileDialog Settings]
+Recent Files[$e]=file:$HOME/scripts/myfirst.ui,file:$HOME/scripts/QtDesigner/myfirst.ui
+Recent URLs[$e]=file:$HOME/scripts/QtDesigner/
+detailViewIconSize=0
+
+[TranslatorWidget]
+mainSplitter=0,0

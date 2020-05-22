@@ -1,0 +1,19 @@
+[$Version]
+update_info=spectacle_newConfig.upd:spectacle-new-config
+
+[GuiConfig]
+captureDelay=6
+captureMode=3
+cropRegion=0,0,0,0
+onClickChecked=false
+window-position=315,27
+
+[KFileDialog Settings]
+Recent Files[$e]=file:$HOME/Pictures/passport.png,file:$HOME/Pictures/Screenshot_20200306_193921.png,file:$HOME/Pictures/Screenshot_20200306_193158.png
+Recent URLs[$e]=file:$HOME/Pictures/
+detailViewIconSize=0
+
+[Save]
+lastSaveAsLocation=file:///home/steve/Pictures/Screenshot_20200306_193921.png
+lastSaveLocation=file:///home/steve/Pictures/Screenshot_20200306_193921.png
+lastUsedSaveMode=0

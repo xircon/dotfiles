@@ -1,0 +1,214 @@
+[Data Source 0]
+Custom Fields=imdb-rating,imdb
+Fetch Images=true
+Host=
+Max Cast=10
+Name=Internet Movie Database
+Type=1
+UpdateOverwrite=false
+Uuid={da59d6a9-e40d-432f-b9bb-9f7e0295a983}
+
+[Data Source 1]
+Custom Fields=
+Format=mods
+Host=z3950.loc.gov
+Name=Library of Congress (US)
+Path=/voyager
+Port=7090
+Type=3
+UpdateOverwrite=false
+Uuid={97ae030e-e873-477d-b6f2-19c4d2999125}
+
+[Data Source 10]
+Custom Fields=
+Name=BiblioShare
+Type=27
+UpdateOverwrite=false
+Uuid={35c4a762-0d43-4f14-abb8-cf59a2da5617}
+
+[Data Source 11]
+Custom Fields=
+Name=DBLP
+Type=39
+UpdateOverwrite=false
+Uuid={1967e2cb-5a3c-41be-8801-d0d5b817b9f6}
+
+[Data Source 12]
+Custom Fields=
+Name=HathiTrust
+Type=37
+UpdateOverwrite=false
+Uuid={248a319e-944c-47ac-9c94-ef1e4d302e87}
+
+[Data Source 13]
+Custom Fields=
+Name=MusicBrainz
+Type=19
+UpdateOverwrite=false
+Uuid={14099329-66e9-4e90-baf2-1d5d96ae0138}
+
+[Data Source 14]
+Custom Fields=
+Image Size=0
+Name=TheGamesDB
+Type=38
+UpdateOverwrite=false
+Uuid={a3815d40-ddb9-471a-91d1-eab94eabff81}
+
+[Data Source 15]
+Custom Fields=
+Name=Internet Game Database (IGDB.com)
+Type=48
+UpdateOverwrite=false
+Uuid={a4adba4e-c2f0-4497-b56c-246aeff9ba30}
+
+[Data Source 16]
+Custom Fields=
+Name=The Visual Novel Database
+Type=40
+UpdateOverwrite=false
+Uuid={742179ec-f331-4b7d-aca0-e2f5e3438d3c}
+
+[Data Source 17]
+Custom Fields=
+Name=VideoGameGeek
+Type=46
+UpdateOverwrite=false
+Uuid={c186962c-ee1f-43ba-9947-74d0c8c62426}
+
+[Data Source 18]
+Custom Fields=
+Name=BoardGameGeek
+Type=42
+UpdateOverwrite=false
+Uuid={1cd6a0d4-b0a2-47cc-8f44-9765657d0080}
+
+[Data Source 19]
+Custom Fields=
+Locale=en
+Name=The Movie DB (TMDb)
+Type=18
+UpdateOverwrite=false
+Uuid={75390300-de58-4027-978d-e5342a7f3a15}
+
+[Data Source 2]
+Custom Fields=
+Name=ISBNdb.com
+Type=9
+UpdateOverwrite=false
+Uuid={ba70a26f-9e97-40a4-92e0-cf1345f1cb29}
+
+[Data Source 3]
+Custom Fields=
+Name=Open Library
+Type=21
+UpdateOverwrite=false
+Uuid={f00d6080-1c64-441c-829a-07e8640f2048}
+
+[Data Source 4]
+Custom Fields=
+Name=Google Book Search
+Type=29
+UpdateOverwrite=false
+Uuid={6ddf05a8-c0ee-4e9a-9541-a9d03d448655}
+
+[Data Source 5]
+Custom Fields=
+Name=AnimeNfo.com
+Type=7
+UpdateOverwrite=false
+Uuid={44101595-2227-427d-8fe8-7f69373ce392}
+
+[Data Source 6]
+Custom Fields=
+Name=Bedetheque
+Type=43
+UpdateOverwrite=false
+Uuid={a30aab36-ed55-4047-865c-291b62589066}
+
+[Data Source 7]
+Custom Fields=
+Name=Comic Vine
+Type=51
+UpdateOverwrite=false
+Uuid={f104799f-440a-4c90-b99c-3905c14f5f77}
+
+[Data Source 8]
+Custom Fields=
+Name=arXiv.org
+Type=13
+UpdateOverwrite=false
+Uuid={5d42a166-a7a9-4ca9-9bf4-2d473a515c9c}
+
+[Data Source 9]
+Custom Fields=
+Name=Google Scholar
+Type=15
+UpdateOverwrite=false
+Uuid={7c5ec0e9-a100-4c57-887c-e04a7f5e9539}
+
+[Data Sources]
+Sources Count=20
+
+[DownloadDialog Settings]
+Height 900=424
+Width 1600=700
+
+[Edit Dialog Options]
+Height 900=330
+Width 1600=808
+
+[EditImage]
+editor=imv
+
+[Fetch Dialog Options]
+Height 900=858
+Search Key=1
+Search Source=Internet Movie Database
+Splitter Sizes=235,419
+Width 1600=822
+
+[General Options]
+Enable Webcam=false
+Last Open File=file:///home/steve/Documents/Films.tc
+
+[HTML Settings]
+AutomaticDetectionLanguage=1
+
+[KFileDialog Settings]
+Recent Files[$e]=file:$HOME/Documents/Films.tc,file:$HOME/Downloads/imdb-t&a.jpg,file:$HOME/Downloads/imdb-dv.jpg,file:$HOME/Downloads/baytown.jpg,file:$HOME/Downloads/triggerman.jpg
+Recent URLs[$e]=file:$HOME/Downloads/
+detailViewIconSize=0
+
+[Main Window Options]
+Central Dock State=\x00\x00\x00\xff\x00\x00\x00\x00\xfd\x00\x00\x00\x01\x00\x00\x00\x02\x00\x00\x05\xb0\x00\x00\x00\xd1\xfc\x01\x00\x00\x00\x01\xfb\x00\x00\x00\x1e\x00c\x00o\x00l\x00l\x00e\x00c\x00t\x00i\x00o\x00n\x00_\x00d\x00o\x00c\x00k\x01\x00\x00\x00\x00\x00\x00\x05\xb0\x00\x00\x00@\x00\xff\xff\xff\x00\x00\x05\xb0\x00\x00\x02:\x00\x00\x00\x04\x00\x00\x00\x04\x00\x00\x00\x08\x00\x00\x00\x08\xfc\x00\x00\x00\x00
+Height 900=884
+MenuBar=Disabled
+State=AAAA/wAAAAD9AAAAAQAAAAAAAACJAAADEvwCAAAAAfsAAAAUAGcAcgBvAHUAcABfAGQAbwBjAGsBAAAAKgAAAxIAAACAAP///wAABbAAAAMSAAAABAAAAAQAAAAIAAAACPwAAAABAAAAAgAAAAIAAAAWAG0AYQBpAG4AVABvAG8AbABCAGEAcgEAAAAA/////wAAAAAAAAAAAAAAIgBjAG8AbABsAGUAYwB0AGkAbwBuAFQAbwBvAGwAQgBhAHIBAAABnP////8AAAAAAAAAAA==
+ToolBarsMovable=Disabled
+Width 1600=160
+Window-Maximized 900x1600=true
+
+[Options - video]
+ColumnNames=title
+ColumnOrder=0
+ColumnWidths=1454
+Group By=year
+Prev2SortColumn=-1
+PrevSortColumn=-1
+SortColumn=0
+SortOrder=0
+Template Font=Noto Sans,12,-1,5,50,0,0,0,0,0
+Template Highlight Color=128,128,255
+Template Highlighted Text Color=255,255,255
+
+[Recent Dirs]
+image/home/steve[$e]=$HOME/Downloads,$HOME/Documents
+open[$e]=$HOME/Documents
+
+[Recent Files]
+File1[$e]=$HOME/Documents/Films.tc
+Name1[$e]=Films.tc
+
+[TipOfDay]
+RunOnStart=false

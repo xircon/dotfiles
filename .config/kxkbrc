@@ -1,0 +1,13 @@
+[Layout]
+DisplayNames=
+LayoutList=gb
+LayoutLoopCount=-1
+Model=pc102
+Options=terminate:ctrl_alt_bksp,shift:both_capslock_cancel,caps:ctrl_modifier
+ResetOldOptions=true
+ShowFlag=false
+ShowLabel=true
+ShowLayoutIndicator=true
+ShowSingle=false
+SwitchMode=Global
+Use=true

@@ -1,0 +1,70 @@
+Height 900=668
+MenuBar=Disabled
+State=AAAA/wAAAAD9AAAAAwAAAAAAAADJAAACnPwCAAAAAvsAAAAWAGYAbwBsAGQAZQByAHMARABvAGMAawAAAAAA/////wAAAB8A////+wAAABQAcABsAGEAYwBlAHMARABvAGMAawEAAAAAAAACnAAAAHkA////AAAAAQAAAAAAAAAA/AIAAAAB+wAAABAAaQBuAGYAbwBEAG8AYwBrAAAAAAD/////AAAAHwD///8AAAADAAAD2gAAANP8AQAAAAH7AAAAGAB0AGUAcgBtAGkAbgBhAGwARABvAGMAawAAAABCAAAD2gAAADsA////AAADDwAAApwAAAAEAAAABAAAAAgAAAAI/AAAAAEAAAAAAAAAAQAAABYAbQBhAGkAbgBUAG8AbwBsAEIAYQByAwAAAAD/////AAAAAAAAAAA=
+Width 1600=1054
+
+[CompactMode]
+FontWeight=50
+
+[Desktop Entry]
+DefaultProfile=Shell.profile
+
+[DetailsMode]
+FontWeight=50
+
+[DownloadDialog Settings]
+Height 900=512
+Width 1600=700
+
+[Favorite Profiles]
+Favorites=
+
+[General]
+LockPanels=false
+ShowSelectionToggle=false
+SortingChoice=CaseInsensitiveSorting
+Version=200
+ViewPropsTimestamp=2019,10,19,22,7,45
+
+[IconsMode]
+FontWeight=50
+
+[KPropertiesDialog]
+Height 900=492
+Width 1600=547
+
+[MainWindow]
+Height 480=438
+Height 600=564
+Height 768=668
+Height 900=396
+MenuBar=Disabled
+State=AAAA/wAAAAD9AAAAAwAAAAAAAACiAAABjPwCAAAAAvsAAAAWAGYAbwBsAGQAZQByAHMARABvAGMAawAAAAAA/////wAAAB0A////+wAAABQAcABsAGEAYwBlAHMARABvAGMAawEAAAAAAAABjAAAAGUA////AAAAAQAAAAAAAAAA/AIAAAAB+wAAABAAaQBuAGYAbwBEAG8AYwBrAAAAAAD/////AAAAHQD///8AAAADAAACvwAAANP8AQAAAAH7AAAAGAB0AGUAcgBtAGkAbgBhAGwARABvAGMAawAAAABAAAACvwAAADYA////AAACKwAAAYwAAAAEAAAABAAAAAgAAAAI/AAAAAEAAAAAAAAAAQAAABYAbQBhAGkAbgBUAG8AbwBsAEIAYQByAwAAAAD/////AAAAAAAAAAA=
+ToolBarsMovable=Disabled
+Width 1024=992
+Width 1600=788
+Width 640=596
+Width 800=768
+
+[MainWindow][Toolbar mainToolBar]
+IconSize=32
+ToolButtonStyle=IconOnly
+
+[Open-with settings]
+CompletionMode=1
+History=imv,ark
+
+[PreviewSettings]
+Plugins=appimagethumbnail,audiothumbnail,blenderthumbnail,comicbookthumbnail,djvuthumbnail,ebookthumbnail,exrthumbnail,directorythumbnail,fontthumbnail,imagethumbnail,jpegthumbnail,kraorathumbnail,windowsexethumbnail,windowsimagethumbnail,opendocumentthumbnail,gsthumbnail,rawthumbnail,svgthumbnail,ffmpegthumbs
+
+[SettingsDialog]
+Height 900=506
+Width 1600=660
+
+[Toolbar mainToolBar]
+IconSize=32
+ToolButtonStyle=IconOnly
+
+[ViewPropertiesDialog]
+Height 900=246
+Width 1600=365

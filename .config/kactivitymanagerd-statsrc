@@ -1,0 +1,17 @@
+[Favorites-org.kde.plasma.kickoff.favorites.instance-2-18f0f48d-de11-4251-8724-9c5602eb7c02]
+ordering=applications:firefox.desktop,applications:org.kde.dolphin.desktop,applications:org.kde.konversation.desktop,applications:libreoffice-writer.desktop,applications:org.kde.konsole.desktop,applications:pamac-manager.desktop,applications:pamac-updater.desktop,applications:systemsettings.desktop,preferred://browser,applications:org.kde.kate.desktop
+
+[Favorites-org.kde.plasma.kickoff.favorites.instance-2-global]
+ordering=applications:firefox.desktop,applications:org.kde.dolphin.desktop,applications:org.kde.konversation.desktop,applications:libreoffice-writer.desktop,applications:org.kde.konsole.desktop,applications:pamac-manager.desktop,applications:pamac-updater.desktop,applications:systemsettings.desktop,preferred://browser,applications:org.kde.kate.desktop
+
+[Favorites-org.kde.plasma.kickoff.favorites.instance-4-18f0f48d-de11-4251-8724-9c5602eb7c02]
+ordering=preferred://browser,applications:systemsettings.desktop,applications:org.kde.dolphin.desktop,applications:org.kde.kate.desktop,applications:libreoffice-writer.desktop,applications:org.kde.konsole.desktop,applications:org.kde.konversation.desktop,applications:pamac-manager.desktop,applications:pamac-updater.desktop,applications:wine-Programs-Valve-Half-Life-Half-Life.desktop,applications:Half-Life 2.desktop
+
+[Favorites-org.kde.plasma.kickoff.favorites.instance-4-global]
+ordering=preferred://browser,applications:systemsettings.desktop,applications:org.kde.dolphin.desktop,applications:org.kde.kate.desktop,applications:libreoffice-writer.desktop,applications:org.kde.konsole.desktop,applications:org.kde.konversation.desktop,applications:pamac-manager.desktop,applications:pamac-updater.desktop,applications:wine-Programs-Valve-Half-Life-Half-Life.desktop,applications:Half-Life 2.desktop
+
+[Favorites-org.kde.plasma.kickoff.favorites.instance-44-18f0f48d-de11-4251-8724-9c5602eb7c02]
+ordering=preferred://browser,kontact.desktop,systemsettings.desktop,org.kde.dolphin.desktop,ktp-contactlist.desktop,org.kde.kate.desktop,org.kde.discover.desktop
+
+[Favorites-org.kde.plasma.kickoff.favorites.instance-44-global]
+ordering=preferred://browser,kontact.desktop,systemsettings.desktop,org.kde.dolphin.desktop,ktp-contactlist.desktop,org.kde.kate.desktop,org.kde.discover.desktop

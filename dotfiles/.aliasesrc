@@ -282,6 +282,7 @@ alias cxc="/home/steve/.config/bspwm/xcape/cinnamon-xcape.sh"
 #Memory:
 alias psmem="sudo ps_mem"
 alias psg="ps aux | grep "
+alias psl='watch -n0.5 "ps -e --sort -pcpu -o pid,pcpu,comm"'
 
 # psg () {
 #     cmd='ps aux | grep $1 | grep -v "sqlite|grep|psg"'

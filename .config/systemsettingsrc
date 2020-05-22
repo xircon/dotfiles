@@ -1,0 +1,33 @@
+[ConfigDialog]
+Height 900=271
+Width 1600=312
+
+[DownloadDialog Settings]
+Height 900=512
+Width 1600=700
+
+[FileDialogSize]
+Height 900=480
+Width 1600=672
+
+[KFileDialog Settings]
+Recent Files[$e]=browser.sh,file:$HOME/scripts/emacs.sh,file:$HOME/scripts/dolphin.sh,file:$HOME/dotfiles/plasma-xcape.sh,file:$HOME/scripts/emf,file:$HOME/scripts/terminator.sh,file:$HOME/scripts/browser.sh
+Recent URLs[$e]=file:$HOME/scripts/
+detailViewIconSize=0
+
+[KPropertiesDialog]
+Height 900=443
+Width 1600=450
+
+[MainWindow]
+Height 900=857
+MenuBar=Disabled
+State=AAAA/wAAAAD9AAAAAAAABAAAAANZAAAABAAAAAQAAAAIAAAACPwAAAABAAAAAgAAAAEAAAAWAG0AYQBpAG4AVABvAG8AbABCAGEAcgAAAAAA/////wAAAAAAAAAA
+ToolBarsMovable=Disabled
+Width 1600=1024
+Window-Maximized 480x640=true
+Window-Maximized 900x1600=true
+
+[Open-with settings]
+CompletionMode=1
+History=emacs,greenclip,clipmenud,plan,connman-gtk,nex,latt,var,aut,alb

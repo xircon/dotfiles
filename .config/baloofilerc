@@ -1,0 +1,11 @@
+[Basic Settings]
+Indexing-Enabled=false
+
+[General]
+dbVersion=2
+exclude filters=.xsession-errors*,*.aux,*.swap,*.qcow2,.uic,node_packages,*.faa,*.nvram,config.status,*.vbox*,*.vhdx,CMakeTmpQmake,*.po,vbox.log,*.vdi,*.gb,__pycache__,ui_*.h,*.csproj,*.tmp,.histfile.*,*.loT,*.sql,*.map,autom4te,*.pc,*.fasta,*.img,CTestTestfile.cmake,*.init,*.sql.gz,*.vhd,po,.yarn-cache,nbproject,litmain.sh,*.qmlc,*~,core-dumps,*.gcode,_darcs,moc_*.cpp,*.fq,.svn,*.omf,lost+found,*.pyo,*.la,CVS,.bzr,.pch,*.db,*.fna,*.so,*.ini,.npm,Makefile.am,*.elc,.obj,*.m4,*.vmdk,*.gmo,CMakeFiles,CMakeCache.txt,*.orig,*.a,cmake_install.cmake,confdefs.h,*.jsc,*.vm*,node_modules,qrc_*.cpp,*.lo,confstat,*.moc,libtool,.moc,*.o,.yarn,*.fastq,.git,conftest,*.part,*.class,*.gbff,*.rcore,CMakeTmp,*.qrc,lzo,*.pyc,*.rej,.hg
+exclude filters version=5
+exclude folders[$e]=/run/media/steve/HP Pocket Media Drive/
+first run=true
+folders[$e]=$HOME/
+only basic indexing=true

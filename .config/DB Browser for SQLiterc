@@ -1,0 +1,8 @@
+[FileDialogSize]
+Height 900=480
+Width 1600=649
+
+[KFileDialog Settings]
+Recent Files[$e]=mydatabase.db,file:$HOME/.local/share/buku/bookmarks.db,file:$HOME/.histdb/zsh-history.db,file:$HOME/scripts/py-dataset/mydatabase.db
+Recent URLs[$e]=file:$HOME/.local/share/buku/
+detailViewIconSize=0

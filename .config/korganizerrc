@@ -1,0 +1,88 @@
+[AgentTypeDialog]
+Size=460,320
+
+[Calendar]
+Default Calendar=-1
+
+[CollectionPropertiesDialog]
+Size=440,474
+
+[CollectionTreeView]
+Expansion=c1,c13
+HorizontalScroll=0
+VerticalScroll=0
+
+[General]
+CalendarFilters=
+Current Filter=
+Current View=Month
+Range Mode=3
+
+[GlobalCollectionSelection]
+Current=x-1
+Selection=c10,c21,c20,c4,c15,c16,c14,c19,c17,c18,c2,c3
+
+[GlobalCollectionView]
+Expansion=
+HorizontalScroll=0
+VerticalScroll=0
+
+[IncidenceDialog]
+Size=742,578
+
+[Internal Settings]
+DefaultResourceColorSeed=12
+
+[KOrganizer Geometry]
+Separator1=0,1599
+Separator2=326,0,88,361
+
+[MainWindow]
+Height 900=890
+State=AAAA/wAAAAD9AAAAAAAABjAAAAMfAAAABAAAAAQAAAAIAAAACPwAAAABAAAAAgAAAAQAAAAWAG0AYQBpAG4AVABvAG8AbABCAGEAcgEAAAAA/////wAAAAAAAAAAAAAAJABrAG8AcgBnAGEAbgBpAHoAZQByAF8AdABvAG8AbABiAGEAcgEAAANk/////wAAAAAAAAAAAAAAIABzAGMAaABlAGQAdQBsAGUAXwB0AG8AbwBsAGIAYQByAAAAAAD/////AAAAAAAAAAAAAAAcAGYAaQBsAHQAZQByAF8AdABvAG8AbABiAGEAcgAAAAAA/////wAAAAAAAAAA
+ToolBarsMovable=Disabled
+Width 1600=1584
+
+[Migratekde4]
+Version=1
+
+[Quickview]
+Separator=87,364
+Size=775,600
+
+[Settings]
+DateNavigatorVisible=true
+EventViewerVisible=true
+ResourceViewVisible=true
+TodoViewVisible=false
+
+[Sidebar Todo View]
+ColumnOrder=0,1,2,3,4,5,6,7,8
+ColumnVisibility=true,false,false,false,true,true,false,false,false
+ColumnWidths=82,0,0,0,106,90,0,0,0
+SortAscending=1
+SortColumn=0
+
+[Time & Date]
+Holidays=gb-eaw_en-gb
+
+[Timescale]
+Timescale Timezones=
+
+[TodoTreeViewState]
+Current=x-1
+Expansion=
+HorizontalScroll=0
+Selection=
+VerticalScroll=0
+
+[TodoTreeViewStateS]
+Current=x-1
+Expansion=
+HorizontalScroll=0
+Selection=
+VerticalScroll=0
+
+[Views]
+Separator AgendaView=157,571
+ShownDatesCount=7

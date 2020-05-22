@@ -1,0 +1,6 @@
+[Common]
+ShadowColor=85,0,255
+ShadowStrength=120
+
+[Windeco]
+ButtonSize=2

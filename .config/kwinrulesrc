@@ -1,0 +1,74 @@
+[1]
+Description=krunner centre
+clientmachine=localhost
+clientmachinematch=0
+position=450,450
+positionrule=2
+title=KRunner — krunner
+titlematch=0
+wmclass=krunner
+wmclasscomplete=false
+wmclassmatch=1
+
+[2]
+Description=Settings for kvantum manager
+clientmachine=localhost
+clientmachinematch=0
+position=46,0
+positionrule=4
+size=743,900
+sizerule=4
+title=Kvantum Manager
+titlematch=0
+wmclass=kvantum manager
+wmclasscomplete=false
+wmclassmatch=1
+
+[3]
+Description=Settings for copyq
+above=true
+aboverule=2
+clientmachine=localhost
+clientmachinematch=0
+title=show - CopyQ
+titlematch=0
+wmclass=copyq
+wmclasscomplete=false
+wmclassmatch=1
+
+[Directories]
+dir_pixmap[$d]
+
+[General]
+BrowserApplication[$d]
+ColorScheme[$d]
+Name[$d]
+count=3
+fixed[$d]
+font[$d]
+menuFont[$d]
+shadeSortColumn[$d]
+smallestReadableFont[$d]
+toolBarFont[$d]
+
+[Icons]
+Theme[$d]
+
+[KDE]
+ChangeCursor[$d]
+ColorScheme[$d]
+LookAndFeelPackage[$d]
+contrast[$d]
+widgetStyle[$d]
+
+[KFileDialog Settings]
+Breadcrumb Navigation[$d]
+
+[Paths]
+Trash[$d]
+
+[PreviewSettings]
+MaximumSize[$d]
+camera[$d]
+file[$d]
+fonts[$d]

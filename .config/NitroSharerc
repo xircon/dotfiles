@@ -1,0 +1,8 @@
+[FileDialogSize]
+Height 900=480
+Width 1600=643
+
+[KFileDialog Settings]
+Recent Files[$e]=Xmodmap,file:$HOME/dotfiles/Xmodmap
+Recent URLs[$e]=file:$HOME/dotfiles/
+detailViewIconSize=0

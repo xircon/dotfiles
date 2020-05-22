@@ -1,0 +1,34 @@
+[$Version]
+update_info=gwenview.upd:SideBar_StatusBar_Rename,gwenview.upd:ImageView_AlphaBackgroundMode_Update,gwenview.upd:DeleteThumbnailSetting_Rename
+
+[General]
+JPEGQuality=10612
+
+[KFileDialog Settings]
+Recent Files[$e]=file:$HOME/wallpaper/Dark/m.jpg,file:$HOME/wallpaper/Dark/m.jpg
+Recent URLs[$e]=file:$HOME/wallpaper/Dark/
+detailViewIconSize=0
+
+[MainWindow]
+Height 900=480
+State=AAAA/wAAAAD9AAAAAAAAAxAAAAMwAAAABAAAAAQAAAAIAAAACPwAAAABAAAAAgAAAAEAAAAWAG0AYQBpAG4AVABvAG8AbABCAGEAcgEAAAAA/////wAAAAAAAAAA
+ToolBarsMovable=Disabled
+Width 1600=678
+Window-Maximized 900x1600=true
+
+[Recent Files]
+File1[$e]=$HOME/wallpaper/-sea-rock-hd-wallpaper.jpg
+File2[$e]=$HOME/wallpaper/mojave/mojave_dynamic_16.jpeg
+File3[$e]=$HOME/Pictures/144542-full_hd-wallpaper-yuumei-digital-art-water-clouds-waves.jpg
+File4[$e]=$HOME/wallpaper/000001.jpg
+File5[$e]=$HOME/wallpaper/Dark/maple.jpg
+File6[$e]=$HOME/Pictures/fastnet.gif
+Name1[$e]=-sea-rock-hd-wallpaper.jpg
+Name2[$e]=mojave_dynamic_16.jpeg
+Name3[$e]=144542-full_hd-wallpaper-yuumei-digital-art-water-clouds-waves.jpg
+Name4[$e]=000001.jpg
+Name5[$e]=maple.jpg
+Name6[$e]=fastnet.gif
+
+[SideBar]
+SideBarSplitterSizes=242,539
