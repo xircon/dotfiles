@@ -231,6 +231,9 @@ alias l1="ls -1"
 alias iotop="sudo iotop"
 alias md="mkdir"
 
+# yadm
+alias myyadm="yadm commit -a --allow-empty-message -m '' && yadm push -u origin master"
+
 # Configuration aliases:
 alias paccfg="se /etc/pacman.conf"
 alias grubcfg="se /etc/default/grub"
