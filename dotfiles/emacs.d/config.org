@@ -712,6 +712,7 @@ map)
 
 ** Miscellaneous packages:
 #+BEGIN_SRC emacs-lisp
+( require 'journalctl-mode) 
 (use-package copyit)                    ; copy path, url, etc.
 ;;(use-package daemons)                   ; system services/daemons
 (use-package diffview)                  ; side-by-side diff view

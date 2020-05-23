@@ -18,7 +18,7 @@ Id_2=298fb705-84e4-46aa-b54d-c06d0dd1498b
 Id_3=47d7c679-25de-4676-8c3d-8fbbb7b0c0e9
 Id_4=82a5090b-05d1-46ce-bbbd-7ab2adcc05b3
 Number=4
-Rows=2
+Rows=1
 
 [DrmOutputs][d6b5549c29][d6b5549c29]
 Scale=1
@@ -95,8 +95,12 @@ cubeslideEnabled=true
 desktopchangeosdEnabled=true
 flipswitchEnabled=true
 highlightwindowEnabled=true
+krohnkiteEnabled=false
+minimizeallEnabled=false
 slideEnabled=false
+synchronizeskipswitcherEnabled=false
 thumbnailasideEnabled=true
+videowallEnabled=false
 windowgeometryEnabled=false
 wobblywindowsEnabled=true
 
