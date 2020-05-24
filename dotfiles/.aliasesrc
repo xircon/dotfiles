@@ -232,7 +232,7 @@ alias iotop="sudo iotop"
 alias md="mkdir"
 
 # yadm
-alias myyadm="yadm commit -am 'Daily' && yadm push -u origin master"
+alias myyadm='yadm commit -am "`date`" && yadm push -u origin master'
 
 # Configuration aliases:
 alias paccfg="se /etc/pacman.conf"
