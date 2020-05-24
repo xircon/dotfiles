@@ -1,12 +1,15 @@
 [Desktop Entry]
 DefaultProfile=Profile 6.profile
 
+[DownloadDialog Settings]
+Height 900=424
+Width 1600=700
+
 [Favorite Profiles]
 Favorites=
 
 [MainWindow]
-Height 900=829
-MenuBar=Disabled
-State=AAAA/wAAAAD9AAAAAAAAAv8AAAM9AAAABAAAAAQAAAAIAAAACPwAAAAA
+Height 900=884
+State=AAAA/wAAAAD9AAAAAAAAAYIAAANUAAAABAAAAAQAAAAIAAAACPwAAAAA
 ToolBarsMovable=Disabled
-Width 1600=767
+Width 1600=386

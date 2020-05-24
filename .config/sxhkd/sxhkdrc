@@ -80,10 +80,11 @@ super + e
 	$TERMINAL -e neomutt; pkill -RTMIN+12 $STATUSBAR
 
 super + m
-    skippy-xd --toggle-window-picker   
+	rofi -show window    
+    #skippy-xd --toggle-window-picker   
 
 super + space
-    skippy-xd --toggle-window-picker   
+    skippy-xd-runner --toggle-window-picker   
     
 super + n
 	kill -s USR1 $(pidof deadd-notification-center)

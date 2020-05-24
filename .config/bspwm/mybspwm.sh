@@ -106,7 +106,7 @@ f_emacs
 #nohup /home/steve/.config/bspwm/desknamer.sh &
 #stalonetray&
 #lxqt-panel&
-skippy-xd --start-daemon&
+skippy-xd-runner --start-daemon&
 nextcloud &
 notify-send "MyBspwm end."
 

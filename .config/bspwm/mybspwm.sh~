@@ -19,7 +19,7 @@ f_kill () {
 f_startups () {
     
     # Start-up programs:
-    sp=( "albert" "xscreensaver" "dclock -miltime" "lxqt-notificationd" "indicator-kdeconnect" "picom" "syncclip" "variety" "nm-applet" \
+    sp=("stalonetray" "albert" "xscreensaver" "lxqt-notificationd" "indicator-kdeconnect" "picom" "syncclip" "variety" "nm-applet" \
 	                       "autokey-gtk" "pnmixer" "indicator-kdeconnect" "lxpolkit" "greenclip daemon")
 
     for i in "${sp[@]}"

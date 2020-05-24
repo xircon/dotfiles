@@ -82,6 +82,9 @@ super + e
 super + m
     skippy-xd --toggle-window-picker   
 
+super + space
+    skippy-xd --toggle-window-picker   
+    
 super + n
 	kill -s USR1 $(pidof deadd-notification-center)
 
