@@ -80,10 +80,11 @@ super + e
 	$TERMINAL -e neomutt; pkill -RTMIN+12 $STATUSBAR
 
 super + m
-    skippy-xd --toggle-window-picker   
+	rofi -show window    
+    #skippy-xd --toggle-window-picker   
 
 super + space
-    skippy-xd --toggle-window-picker   
+    skippy-xd-runner --toggle-window-picker   
     
 super + n
 	kill -s USR1 $(pidof deadd-notification-center)
@@ -350,7 +351,7 @@ super + ctrl + space
 super + shift + {y,u,i,o}
 	bspc node -z {right -20 0,bottom 0 20,bottom 0 -20,right 20 0}
 
-hyper + super  + {Left,Up,Down,Right}
+super + ctrl  + {Left,Up,Down,Right}
 	bspc node -z {right -20 0,bottom 0 20,bottom 0 -20,right 20 0}
 
 hyper + Up

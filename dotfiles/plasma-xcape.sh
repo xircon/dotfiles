@@ -69,6 +69,10 @@ notify-send "Running xcape processes: " `pgrep -c xcape`
 
 #qk start &
 
+sxhkd -c /home/steve/.config/sxhkd/plasma-sxkhdrc&
+
 notify-send "The end!"
+
+
 
 exit 0

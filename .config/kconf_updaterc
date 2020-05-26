@@ -151,9 +151,9 @@ done=ksmserver_update_loginMode_value_default_enum
 mtime=1589188538
 
 [kwin.upd]
-ctime=1589049763
+ctime=1590428545
 done=replace-scalein-with-scale,port-minimizeanimation-effect-to-js,port-scale-effect-to-js,port-dimscreen-effect-to-js,auto-bordersize,animation-speed
-mtime=1588696618
+mtime=1588702357
 
 [languagetool_kmail.upd]
 ctime=1589586614

@@ -2,8 +2,8 @@
 
 numlockx on&
 
-kill latte-dock
-latte-dock&
+#kill latte-dock
+#latte-dock&
 
 
 f_kill () {
@@ -105,8 +105,8 @@ f_emacs
 
 #nohup /home/steve/.config/bspwm/desknamer.sh &
 #stalonetray&
-#lxqt-panel&
-skippy-xd --start-daemon&
+lxqt-panel&
+skippy-xd-runner --start-daemon&
 nextcloud &
 notify-send "MyBspwm end."
 

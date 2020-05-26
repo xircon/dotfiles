@@ -4,19 +4,19 @@
 
 (setq frame-resize-pixelwise t)
 
-(set-cursor-color "yellow")
+(set-cursor-color "lightgreen")
 
 (set-default 'truncate-lines t)
 
-(setq package-archives
-        '(("Elpa"     . "https://elpa.gnu.org/packages/")
-          ("Melpa Stable" . "https://stable.melpa.org/packages/")
-          ("Melpa"        . "https://melpa.org/packages/")
-          ("marmalade" . "http://marmalade-repo.org/packages/"))
-        package-archive-priorities
-        '(("MELPA Stable" . 10)
-          ("GNU ELPA"     . 5)
-          ("MELPA"        . 0)))
+;; (setq package-archives
+;;         '(("Elpa"     . "https://elpa.gnu.org/packages/")
+;;           ("Melpa Stable" . "https://stable.melpa.org/packages/")
+;;           ("Melpa"        . "https://melpa.org/packages/")
+;;           ("marmalade" . "http://marmalade-repo.org/packages/"))
+;;         package-archive-priorities
+;;         '(("MELPA Stable" . 10)
+;;           ("GNU ELPA"     . 5)
+;;           ("MELPA"        . 0)))
 
 ;;(add-to-list 'default-frame-alist '(background-color . "#000000"))
 (ryo-modal-mode -1)

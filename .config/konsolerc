@@ -8,8 +8,12 @@ Width 1600=700
 [Favorite Profiles]
 Favorites=
 
+[KonsoleWindow]
+ShowMenuBarByDefault=false
+
 [MainWindow]
-Height 900=884
-State=AAAA/wAAAAD9AAAAAAAAAYIAAANUAAAABAAAAAQAAAAIAAAACPwAAAAA
+Height 900=902
+MenuBar=Disabled
+State=AAAA/wAAAAD9AAAAAAAABh8AAAOGAAAABAAAAAQAAAAIAAAACPwAAAAA
 ToolBarsMovable=Disabled
-Width 1600=386
+Width 1600=1567

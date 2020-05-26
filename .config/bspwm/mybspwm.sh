@@ -2,8 +2,8 @@
 
 numlockx on&
 
-kill latte-dock
-latte-dock&
+#kill latte-dock
+#latte-dock&
 
 
 f_kill () {
@@ -19,7 +19,7 @@ f_kill () {
 f_startups () {
     
     # Start-up programs:
-    sp=("stalonetray" "albert" "xscreensaver" "lxqt-notificationd" "indicator-kdeconnect" "picom" "syncclip" "variety" "nm-applet" \
+    sp=("albert" "xscreensaver" "lxqt-notificationd" "indicator-kdeconnect" "picom" "syncclip" "variety" "nm-applet" \
 	                       "autokey-gtk" "pnmixer" "indicator-kdeconnect" "lxpolkit" "greenclip daemon")
 
     for i in "${sp[@]}"
@@ -105,7 +105,7 @@ f_emacs
 
 #nohup /home/steve/.config/bspwm/desknamer.sh &
 #stalonetray&
-#lxqt-panel&
+lxqt-panel&
 skippy-xd-runner --start-daemon&
 nextcloud &
 notify-send "MyBspwm end."

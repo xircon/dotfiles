@@ -92,7 +92,7 @@ super + n
 super + c
    rofi -show calc -modi calc -no-show-match -no-sort
 
-super +b
+super + b
    buku_run
    
 #super + v
@@ -351,7 +351,7 @@ super + ctrl + space
 super + shift + {y,u,i,o}
 	bspc node -z {right -20 0,bottom 0 20,bottom 0 -20,right 20 0}
 
-hyper + super  + {Left,Up,Down,Right}
+super + ctrl  + {Left,Up,Down,Right}
 	bspc node -z {right -20 0,bottom 0 20,bottom 0 -20,right 20 0}
 
 hyper + Up
