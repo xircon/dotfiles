@@ -12,8 +12,9 @@ Favorites=
 ShowMenuBarByDefault=false
 
 [MainWindow]
-Height 900=902
+Height 900=410
 MenuBar=Disabled
 State=AAAA/wAAAAD9AAAAAAAABh8AAAOGAAAABAAAAAQAAAAIAAAACPwAAAAA
 ToolBarsMovable=Disabled
-Width 1600=1567
+Width 1600=390
+Window-Maximized 900x1600=true

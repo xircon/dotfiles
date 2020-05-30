@@ -98,13 +98,13 @@ Word Completion Remove Tail=true
 
 [MainWindow]
 Height 480=444
-Height 900=890
-State=AAAA/wAAAAD9AAAAAAAABiAAAAL6AAAABAAAAAQAAAAIAAAACPwAAAABAAAAAgAAAAEAAAAWAG0AYQBpAG4AVABvAG8AbABCAGEAcgEAAAAA/////wAAAAAAAAAA
+Height 900=856
+State=AAAA/wAAAAD9AAAAAAAAAxQAAAMQAAAABAAAAAQAAAAIAAAACPwAAAABAAAAAgAAAAEAAAAWAG0AYQBpAG4AVABvAG8AbABCAGEAcgEAAAAA/////wAAAAAAAAAA
+StatusBar=Disabled
 ToolBarsMovable=Disabled
-Width 1600=1584
+Width 1600=788
 Width 640=608
-Window-Maximized 900x1600=true
-splitterSizes=1232,329
+splitterSizes=616,165
 
 [Open-with settings]
 CompletionMode=1
@@ -112,21 +112,13 @@ History=ark
 
 [Recent Files]
 File1[$e]=/home/media/Audio Books/DragonLance/DragonLance - Chronicles 01 - Dragons of Autumn Twilight.zip
-File2[$e]=$HOME/Downloads/torrent/Bob.Ombs.Modified.Win10PEx64.v3.9.7z
-File3[$e]=$HOME/dotfiles/transfuse/steve_transfusion_T-20200111_2028.tar.gz
-File4[$e]=$HOME/Downloads/torrent/Factorio 0.16.51/factorio_Lin64_0.16.51.tar.xz
-File5[$e]=$HOME/Downloads/torrent/IDM UltraEdit 26.10.0.72 + patch - Crackingpatching.zip
-File6[$e]=$HOME/Downloads/sk1-2.0rc5_20200314.archlinux.pkgbuild.zip
-File7[$e]=$HOME/Downloads/torrent/Learn python  Basics + Advance + GUI programming/Learn python  Basics + Advance + GUI programming.zip
-File8[$e]=$HOME/Downloads/upp-posix-14296.tar.xz
+File2[$e]=$HOME/dotfiles/transfuse/steve_transfusion_T-20200111_2028.tar.gz
+File3[$e]=$HOME/Downloads/libdc1394-2.2.5-1-x86_64.pkg.tar.xz
+File4[$e]=$HOME/Downloads/MaterialDesign-Webfont-master.zip
 Name1[$e]=DragonLance - Chronicles 01 - Dragons of Autumn Twilight.zip
-Name2[$e]=Bob.Ombs.Modified.Win10PEx64.v3.9.7z
-Name3[$e]=steve_transfusion_T-20200111_2028.tar.gz
-Name4[$e]=factorio_Lin64_0.16.51.tar.xz
-Name5[$e]=IDM UltraEdit 26.10.0.72 + patch - Crackingpatching.zip
-Name6[$e]=sk1-2.0rc5_20200314.archlinux.pkgbuild.zip
-Name7[$e]=Learn python  Basics + Advance + GUI programming.zip
-Name8[$e]=upp-posix-14296.tar.xz
+Name2[$e]=steve_transfusion_T-20200111_2028.tar.gz
+Name3[$e]=libdc1394-2.2.5-1-x86_64.pkg.tar.xz
+Name4[$e]=MaterialDesign-Webfont-master.zip
 
 [Viewer]
 Height 900=437

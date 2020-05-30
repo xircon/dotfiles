@@ -2,19 +2,13 @@
 FullScreen=false
 
 [MainWindow]
-Height 900=543
-State=AAAA/wAAAAD9AAAAAAAAAeAAAAHfAAAABAAAAAQAAAAIAAAACPwAAAABAAAAAgAAAAEAAAAWAG0AYQBpAG4AVABvAG8AbABCAGEAcgEAAAAA/////wAAAAAAAAAA
+Height 900=557
+State=AAAA/wAAAAD9AAAAAAAAAxQAAAHlAAAABAAAAAQAAAAIAAAACPwAAAABAAAAAgAAAAEAAAAWAG0AYQBpAG4AVABvAG8AbABCAGEAcgEAAAAA/////wAAAAAAAAAA
 ToolBarsMovable=Disabled
-Width 1600=480
+Width 1600=788
 
 [Recent Files]
 File1[$e]=$HOME/.local/share/icons/Hey-blue/README.md
-File2[$e]=$HOME/Downloads/ePayslip.pdf
-File3[$e]=$HOME/Downloads/Mandatory Training Guide 2020.pdf
-File4[$e]=$HOME/Downloads/torrent/20 Programming Books Collection Pack-2 ( C, C++ and More )/Mark Summerfield - Rapid GUI Programming with Python and Qt.pdf
-File5[$e]=$HOME/Downloads/Secretary Higher Level - Medical Secretary Higher Level - Admin Team Coordinator - Band 4.pdf
+File2[$e]=$HOME/Downloads/Flu Flyer-Final-180520(5).pdf
 Name1[$e]=README.md
-Name2[$e]=ePayslip.pdf
-Name3[$e]=Mandatory Training Guide 2020.pdf
-Name4[$e]=Mark Summerfield - Rapid GUI Programming with Python and Qt.pdf
-Name5[$e]=Secretary Higher Level - Medical Secretary Higher Level - Admin Team Coordinator - Band 4.pdf
+Name2[$e]=Flu Flyer-Final-180520(5).pdf

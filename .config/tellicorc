@@ -155,17 +155,17 @@ Height 900=424
 Width 1600=700
 
 [Edit Dialog Options]
-Height 900=330
+Height 900=358
 Width 1600=808
 
 [EditImage]
 editor=imv
 
 [Fetch Dialog Options]
-Height 900=858
+Height 900=900
 Search Key=1
 Search Source=Internet Movie Database
-Splitter Sizes=235,419
+Splitter Sizes=250,446
 Width 1600=822
 
 [General Options]
@@ -181,13 +181,11 @@ Recent URLs[$e]=file:$HOME/Downloads/
 detailViewIconSize=0
 
 [Main Window Options]
-Central Dock State=\x00\x00\x00\xff\x00\x00\x00\x00\xfd\x00\x00\x00\x01\x00\x00\x00\x02\x00\x00\x05\xb0\x00\x00\x00\xd1\xfc\x01\x00\x00\x00\x01\xfb\x00\x00\x00\x1e\x00c\x00o\x00l\x00l\x00e\x00c\x00t\x00i\x00o\x00n\x00_\x00d\x00o\x00c\x00k\x01\x00\x00\x00\x00\x00\x00\x05\xb0\x00\x00\x00@\x00\xff\xff\xff\x00\x00\x05\xb0\x00\x00\x02F\x00\x00\x00\x04\x00\x00\x00\x04\x00\x00\x00\x08\x00\x00\x00\x08\xfc\x00\x00\x00\x00
-Height 900=884
-MenuBar=Disabled
-State=AAAA/wAAAAD9AAAAAQAAAAAAAACJAAADHvwCAAAAAfsAAAAUAGcAcgBvAHUAcABfAGQAbwBjAGsBAAAAKgAAAx4AAACAAP///wAABbAAAAMeAAAABAAAAAQAAAAIAAAACPwAAAABAAAAAgAAAAIAAAAWAG0AYQBpAG4AVABvAG8AbABCAGEAcgEAAAAA/////wAAAAAAAAAAAAAAIgBjAG8AbABsAGUAYwB0AGkAbwBuAFQAbwBvAGwAQgBhAHIBAAABnP////8AAAAAAAAAAA==
+Central Dock State=\x00\x00\x00\xff\x00\x00\x00\x00\xfd\x00\x00\x00\x01\x00\x00\x00\x02\x00\x00\x02\x84\x00\x00\x00\xdf\xfc\x01\x00\x00\x00\x01\xfb\x00\x00\x00\x1e\x00c\x00o\x00l\x00l\x00e\x00c\x00t\x00i\x00o\x00n\x00_\x00d\x00o\x00c\x00k\x01\x00\x00\x00\x00\x00\x00\x02\x84\x00\x00\x00@\x00\xff\xff\xff\x00\x00\x02\x84\x00\x00\x00A\x00\x00\x00\x04\x00\x00\x00\x04\x00\x00\x00\x08\x00\x00\x00\x08\xfc\x00\x00\x00\x00
+Height 900=410
+State=AAAA/wAAAAD9AAAAAQAAAAAAAACJAAABJ/wCAAAAAfsAAAAUAGcAcgBvAHUAcABfAGQAbwBjAGsBAAAATwAAAScAAACAAP///wAAAoQAAAEnAAAABAAAAAQAAAAIAAAACPwAAAABAAAAAgAAAAIAAAAWAG0AYQBpAG4AVABvAG8AbABCAGEAcgEAAAAA/////wAAAAAAAAAAAAAAIgBjAG8AbABsAGUAYwB0AGkAbwBuAFQAbwBvAGwAQgBhAHIBAAAB1v////8AAAAAAAAAAA==
 ToolBarsMovable=Disabled
-Width 1600=160
-Window-Maximized 900x1600=true
+Width 1600=788
 
 [Options - video]
 ColumnNames=title
