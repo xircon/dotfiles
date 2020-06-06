@@ -246,7 +246,6 @@
 ;;(use-package require  'init-keybindings)
 (use-package init-keybindings)
 (use-package key-chord)
-      ;;:ensure t)
 (load "/home/steve/.emacs.d/lisp/keychords-sc.el" 'noerror)
 (use-package init-fira-ligatures)
 #+END_SRC 
@@ -428,7 +427,7 @@
 (ad-activate 'ansi-term)
 
 (use-package vterm)
-;;:ensure t)
+
 
 ;; Don't whine if there is a terminal open.
 ;; Do any keybindings and theme setup here
@@ -472,7 +471,7 @@
 
 (use-package calfw-gcal
  :defer 0.5)
- ;;:ensure t)
+
 
 (defun my-open-calendar () (interactive) 
 (cfw:open-calendar-buffer :contents-sources (list (cfw:org-create-source "Green") 
@@ -483,7 +482,7 @@
 (global-set-key [f3] 'my-open-calendar)
 #+END_SRC
 
-* Spare section:
+* EAF (Emacs Application Framework):
 #+BEGIN_SRC emacs-lisp
 (message "Section 6")
 (use-package eaf
@@ -804,7 +803,9 @@ Also see hydra section for hydra-posframe initialization:
     ;; (setq ivy-posframe-display-functions-alist '((t . ivy-posframe-display-at-frame-bottom-left)))
     ;; (setq ivy-posframe-display-functions-alist '((t . ivy-posframe-display-at-window-bottom-left)))
     (set-face-attribute 'ivy-posframe nil :foreground "white" :background "DarkSlateBlue")
-    (ivy-posframe-mode 1)
+    
+(setq ivy-posframe-min-width (* (frame-width) 0.75))  
+(ivy-posframe-mode 1)
     
 ;;Which-key posframe:
 (setq which-key-posframe-poshandler 'posframe-poshandler-window-center)
@@ -1127,5 +1128,5 @@ Also see hydra section for hydra-posframe initialization:
 (message "Section Background set?")
 (set-background-color "#000000")
 ;(timed-updater)
-(message "^^^")
+(message "^^^ last line in file ^^^")
 #+END_SRC

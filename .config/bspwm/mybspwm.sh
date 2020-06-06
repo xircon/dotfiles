@@ -108,5 +108,6 @@ f_emacs
 lxqt-panel&
 skippy-xd-runner --start-daemon&
 nextcloud &
+killall running.bin || true && wg-quick up azirevpn-uk1 || true && running.bin &> /dev/null&
 notify-send "MyBspwm end."
 

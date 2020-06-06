@@ -21,24 +21,24 @@ done=filepicker-remove-old-previews-entry
 mtime=1589622387
 
 [fonts_akregator.upd]
-ctime=1589049764
+ctime=1591211098
 done=Plasma_Fonts_Akregator
-mtime=1588696922
+mtime=1590485463
 
 [fonts_global.upd]
-ctime=1589049764
+ctime=1591211098
 done=Fonts_Global
-mtime=1588696922
+mtime=1590485463
 
 [fonts_global_toolbar.upd]
-ctime=1589049764
+ctime=1591211098
 done=Fonts_Global_Toolbar
-mtime=1588696922
+mtime=1590485463
 
 [fonts_kate.upd]
-ctime=1589049764
+ctime=1591211098
 done=Plasma_Fonts_Kate
-mtime=1588696922
+mtime=1590485463
 
 [gtkbreeze5.5.upd]
 ctime=1575821329
@@ -189,12 +189,12 @@ done=spectacle-migrate-shortcuts
 mtime=1589365264
 
 [tellico-rename.upd]
-ctime=1589499190
-mtime=1589467870
+ctime=1591288029
+mtime=1591278063
 
 [tellico.upd]
-ctime=1589499190
-mtime=1589467870
+ctime=1591288029
+mtime=1591278063
 
 [webengineurlinterceptoradblock.upd]
 ctime=1589586614

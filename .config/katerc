@@ -9,13 +9,20 @@ Height 900=480
 Width 1600=649
 
 [General]
+Close After Last=false
 Config Revision=10
 Days Meta Infos=30
+Modified Notification=false
+Quick Open List Mode=0
+Quick Open Search Mode=0
+Recent File List Entry Count=10
+Restore Window Configuration=true
 Save Meta Infos=true
 Show Full Path in Title=false
 Show Menu Bar=true
 Show Status Bar=true
 Show Tab Bar=true
+Startup Session=manual
 
 [KFileDialog Settings]
 Recent Files[$e]=file:$HOME/old-.zsh_history,file:$HOME/.zsh_history
@@ -61,7 +68,7 @@ Fallback Encoding=ISO 8859-15
 
 [KTextEditor Renderer]
 Animate Bracket Matching=false
-Schema=Normal
+Schema=Breeze Dark
 Show Indentation Lines=false
 Show Whole Bracket Expression=false
 Word Wrap Marker=false
@@ -114,11 +121,17 @@ Word Completion Remove Tail=true
 [KTextEditor::Search]
 Search History=alac,mis,opac
 
+[Konsole]
+AutoSyncronize=true
+RemoveExtension=false
+RunPrefix=
+SetEditor=false
+
 [MainWindow]
-Height 900=856
-State=AAAA/wAAAAD9AAAAAAAAAM4AAAM4AAAABAAAAAQAAAAIAAAACPwAAAABAAAAAAAAAAEAAAAWAG0AYQBpAG4AVABvAG8AbABCAGEAcgMAAAAA/////wAAAAAAAAAA
+Height 900=480
+State=AAAA/wAAAAD9AAAAAAAAA6wAAAHGAAAABAAAAAQAAAAIAAAACPwAAAABAAAAAAAAAAEAAAAWAG0AYQBpAG4AVABvAG8AbABCAGEAcgMAAAAA/////wAAAAAAAAAA
 ToolBarsMovable=Disabled
-Width 1600=246
+Width 1600=980
 
 [MainWindow][Toolbar mainToolBar]
 ToolButtonStyle=IconOnly

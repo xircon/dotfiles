@@ -12,7 +12,8 @@ sortColumn=3
 sortOrder=0
 
 [PlasmaRunnerManager]
-LaunchCounts=
+LaunchCounts=1 services_drawio.desktop
+pluginWhiteList=services,shell,bookmarks,baloosearch,locations
 
 [PlasmaThemeExtended]
 outlineWidth=1

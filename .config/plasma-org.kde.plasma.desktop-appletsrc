@@ -40,7 +40,7 @@ immutability=1
 plugin=org.koffeinfriedhof.gealach
 
 [Containments][38][Applets][41][Configuration]
-PreloadWeight=2
+PreloadWeight=0
 
 [Containments][38][Applets][41][Configuration][ConfigDialog]
 DialogHeight=720
@@ -64,7 +64,7 @@ ToolBoxButtonY=36
 showToolbox=false
 
 [Containments][38][Wallpaper][org.kde.image][General]
-Image=file:///home/steve/.config/variety/wallpaper/wallpaper-clock-c80adbd29282bbdaf0ee26b0135cccaf.jpg
+Image=file:///home/steve/.config/variety/wallpaper/wallpaper-clock-56b5ffb05f8962c9594c2237280c6f0e.jpg
 
 [Containments][38][Wallpaper][org.kde.potd][General]
 FillMode=2

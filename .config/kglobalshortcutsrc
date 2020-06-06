@@ -20,7 +20,7 @@ _k_friendly_name=KDE Daemon
 [kded5]
 Show System Activity=Ctrl+Esc,Ctrl+Esc,Show System Activity
 _k_friendly_name=KDE Daemon
-display=Display\tMeta+P,Display\tMeta+P,Switch Display
+display=Display\t,Display\tMeta+P,Switch Display
 
 [khotkeys]
 _k_friendly_name=KDE Daemon
@@ -38,7 +38,7 @@ _k_friendly_name=KDE Daemon
 {d03619b6-9b3c-48cc-9d9c-a2aadb485550}=none,none,Search
 {effaa765-4738-46e6-b9cd-40706a4e4f59}=Meta+V,none,New Action
 {f1563a86-ae11-45b6-9fd3-c0a55f7cadb4}=Meta+T,none,ST
-{f4c985f0-0a16-4890-b916-0ec76944c6d1}=Meta+F,none,rofi
+{f4c985f0-0a16-4890-b916-0ec76944c6d1}=Meta+P,none,rofi
 {f9313328-47d2-4312-9b56-091f2647e498}=Ctrl+Alt+T,none,Launch Konsole
 
 [kmix]
@@ -264,6 +264,7 @@ activate entry 6=none,Meta+6,Activate Entry 6
 activate entry 7=none,Meta+7,Activate Entry 7
 activate entry 8=none,Meta+8,Activate Entry 8
 activate entry 9=none,Meta+9,Activate Entry 9
+activate widget 385=Alt+F1,none,Activate Application Menu Widget
 clear-history=none,none,Clear Clipboard History
 clipboard_action=Ctrl+Alt+X,Ctrl+Alt+X,Enable Clipboard Actions
 cycleNextAction=none,none,Next History Item

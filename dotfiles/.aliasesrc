@@ -65,7 +65,8 @@ alias qs="sudo pacman -Qs "
 alias dblck"sudo rm /var/lib/pacman/db.lck"
 alias qm="pacman -Qqm"
 alias yyy="trizen -Syyu && trizen -Sa"
-alias syu="sudo pacman-mirrors -f20 && trizen -Syyua --noconfirm && trizen -Syyu --noconfirm"
+#alias syu="sudo pacman-mirrors -f20 && trizen -Syyua --noconfirm && trizen -Syyu --noconfirm"
+alias syu="/home/steve/scripts/syu.sh"
 alias clean="pamac clean --keep 3"
 alias syuu="sudo pacman-mirrors -f5 && sudo pacman -Syyuu"
 alias mirrors="sudo pacman-mirrors -f5"
@@ -388,7 +389,7 @@ alias jedrc="jed .jedrc"
 alias edir="cd ~/.emacs.d"
 alias emt="emacs -nw --no-init-file -q"
 alias emc="emacs&"
-alias rstrt="systemctl restart --user emacs"
+alias rstrt="systemctl stop --user emacs && time systemctl restart --user emacs"
 alias te="emacs -Q -nw"
 #alias emacs="emacs &> /dev/null"
 
@@ -599,8 +600,8 @@ alias localepurge="sudo /usr/bin/localepurge-config && sudo localepurge ##<<this
 
 alias wallp='cd ~/wallpaper'
 
-alias myip="echo 'Wireless:' && localip && echo -n 'ipv6: ' && curl v6.ifconfig.co && echo -n 'ipv4: ' && curl -4 v4.ifconfig.co"
-
+#alias myip="echo 'Wireless:' && localip && echo -n 'ipv6: ' && curl v6.ifconfig.co && echo -n 'ipv4: ' && curl -4 v4.ifconfig.co"
+alias myip="~/scripts/myip.sh"
 localip(){
    dev=`iw dev | grep Interface |  awk '{print $2}'`
    ip=`ip addr show $dev | grep 'inet ' |  awk '{print $2}' | cut -f1 -d'/'`
@@ -608,6 +609,7 @@ localip(){
 }
 
 alias cfg='cd ~/.config'
+alias auto='cd ~/.config/autostart/'
 alias pics='cd ~/Pictures'
 alias cclip='xclip -selection clipboard'
 alias fclip="greenclip print | sed '/^$/d' | fzf -e | xargs -r -d'\n' -I '{}' greenclip print '{}'"
