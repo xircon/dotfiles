@@ -2,5 +2,10 @@
 Height 900=512
 Width 1600=700
 
+[KFileDialog Settings]
+Recent Files[$e]=AzireVPN-ca1.ovpn,file:$HOME/Downloads/AzireVPN-es1.ovpn,file:$HOME/Downloads/AzireVPN-ca1.ovpn
+Recent URLs[$e]=file:$HOME/Downloads/
+detailViewIconSize=0
+
 [PlasmaRunnerManager]
 LaunchCounts=

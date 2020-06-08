@@ -804,7 +804,7 @@ Also see hydra section for hydra-posframe initialization:
     ;; (setq ivy-posframe-display-functions-alist '((t . ivy-posframe-display-at-window-bottom-left)))
     (set-face-attribute 'ivy-posframe nil :foreground "white" :background "DarkSlateBlue")
     
-(setq ivy-posframe-min-width (* (frame-width) 0.75))  
+;;(setq ivy-posframe-min-width (* (frame-width) 0.75))  
 (ivy-posframe-mode 1)
     
 ;;Which-key posframe:

@@ -18,7 +18,7 @@ Id_2=298fb705-84e4-46aa-b54d-c06d0dd1498b
 Id_3=47d7c679-25de-4676-8c3d-8fbbb7b0c0e9
 Id_4=82a5090b-05d1-46ce-bbbd-7ab2adcc05b3
 Number=4
-Rows=1
+Rows=4
 
 [DrmOutputs][d6b5549c29][d6b5549c29]
 Scale=1
@@ -106,7 +106,6 @@ wobblywindowsEnabled=true
 
 [Script-desktopchangeosd]
 PopupHideDelay=1000
-TextOnly=true
 
 [TabBox]
 ActivitiesMode=1
