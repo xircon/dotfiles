@@ -99,7 +99,7 @@ Word Completion Remove Tail=true
 [MainWindow]
 Height 480=444
 Height 900=856
-State=AAAA/wAAAAD9AAAAAAAAAxQAAAMQAAAABAAAAAQAAAAIAAAACPwAAAABAAAAAgAAAAEAAAAWAG0AYQBpAG4AVABvAG8AbABCAGEAcgEAAAAA/////wAAAAAAAAAA
+State=AAAA/wAAAAD9AAAAAAAAAxQAAAMYAAAABAAAAAQAAAAIAAAACPwAAAABAAAAAgAAAAEAAAAWAG0AYQBpAG4AVABvAG8AbABCAGEAcgEAAAAA/////wAAAAAAAAAA
 StatusBar=Disabled
 ToolBarsMovable=Disabled
 Width 1600=788
@@ -115,10 +115,12 @@ File1[$e]=/home/media/Audio Books/DragonLance/DragonLance - Chronicles 01 - Drag
 File2[$e]=$HOME/dotfiles/transfuse/steve_transfusion_T-20200111_2028.tar.gz
 File3[$e]=$HOME/Downloads/libdc1394-2.2.5-1-x86_64.pkg.tar.xz
 File4[$e]=$HOME/Downloads/MaterialDesign-Webfont-master.zip
+File5[$e]=$HOME/Downloads/CudaText_addons.zip
 Name1[$e]=DragonLance - Chronicles 01 - Dragons of Autumn Twilight.zip
 Name2[$e]=steve_transfusion_T-20200111_2028.tar.gz
 Name3[$e]=libdc1394-2.2.5-1-x86_64.pkg.tar.xz
 Name4[$e]=MaterialDesign-Webfont-master.zip
+Name5[$e]=CudaText_addons.zip
 
 [Viewer]
 Height 900=437

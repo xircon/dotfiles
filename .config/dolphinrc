@@ -30,8 +30,8 @@ ViewPropsTimestamp=2019,10,19,22,7,45
 FontWeight=50
 
 [KPropertiesDialog]
-Height 900=538
-Width 1600=527
+Height 900=443
+Width 1600=384
 
 [MainWindow]
 Height 480=450

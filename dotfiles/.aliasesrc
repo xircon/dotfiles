@@ -421,7 +421,7 @@ alias prom="PS1=$(spaceship_prompt)"
 #alias prom-="PS1 export=~>"
 
 #URLS:
-alias rl="firefox https://www.bbc.co.uk/sport/rugby-league"
+alias rl="xdg-open https://www.bbc.co.uk/sport/rugby-league"
 
 
 #Sky Remote:

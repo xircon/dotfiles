@@ -3,6 +3,6 @@ Height 900=480
 Width 1600=912
 
 [KFileDialog Settings]
-Recent Files[$e]=manjaro-xfce-18.1.5-rc1-testing-191226-linux54.iso,file:$HOME/Downloads/pacbang-2020.02.21.iso
+Recent Files[$e]=manjaro-xfce-18.1.5-rc1-testing-191226-linux54.iso,file:$HOME/Downloads/alpine-virt-3.12.0-x86_64.iso
 Recent URLs[$e]=file:$HOME/Downloads/
 detailViewIconSize=0

@@ -106,9 +106,10 @@ wobblywindowsEnabled=true
 
 [Script-desktopchangeosd]
 PopupHideDelay=1000
+TextOnly=true
 
 [TabBox]
-ActivitiesMode=1
+ActivitiesMode=0
 ApplicationsMode=0
 BorderActivate=9
 BorderAlternativeActivate=9
@@ -116,8 +117,7 @@ DesktopLayout=org.kde.breeze.desktop
 DesktopListLayout=org.kde.breeze.desktop
 DesktopMode=0
 HighlightWindows=true
-LayoutName=org.kde.breeze.desktop
-MinimizedMode=0
+LayoutName=flipswitch
 MultiScreenMode=0
 ShowDesktopMode=0
 ShowTabBox=true

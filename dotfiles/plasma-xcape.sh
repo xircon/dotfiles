@@ -24,7 +24,7 @@ xmodmap ~/.Xmodmap &
 sleep 5
 
 xcape -e "Hyper_L=space" &
-#xcape -e 'Shift_L=Super_L|space'&
+#xcape -e 'Shift_L=Escape|BackSpace'&
 #xcape -e "Shift_L=Control_L|1"&
 #xcape -e 'Alt_L=Super_L|w'
 #xcape -e "Control_L=Super_L|t"&
@@ -33,10 +33,10 @@ xcape -e "Hyper_L=space" &
 
 killall running.bin
 
-while ! ping -c 1 -W 1 8.8.8.8; do
-    echo "Waiting for 1.2.3.4 - network interface might be down..."
-    sleep 1
-done
+# while ! ping -c 1 -W 1 8.8.8.8; do
+#     echo "Waiting for 1.2.3.4 - network interface might be down..."
+#     sleep 1
+# done
 
 #up=$(pgrep -c ^wg-crypt-azirev)
 #echo $up

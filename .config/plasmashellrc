@@ -15,6 +15,9 @@ detailViewIconSize=0
 LaunchCounts=1 services_fontinst.desktop,1 services_kcm_fonts.desktop
 pluginWhiteList=desktopsessions,services,places,PowerDevil,calculator,unitconverter,shell,bookmarks,recentdocuments,locations,baloosearch
 
+[PlasmaTransientsConfig]
+PreloadWeight=0
+
 [PlasmaViews][Panel 1][Defaults]
 thickness=45
 
@@ -75,7 +78,7 @@ panelVisibility=1
 [PlasmaViews][Panel 42][Defaults]
 maxLength=882
 minLength=882
-offset=18
+offset=0
 thickness=300
 
 [PlasmaViews][Panel 42][Horizontal1600]
@@ -84,7 +87,7 @@ thickness=48
 [PlasmaViews][Panel 42][Vertical900]
 maxLength=882
 minLength=882
-offset=18
+offset=0
 thickness=300
 
 [PlasmaViews][Panel 43][Defaults]

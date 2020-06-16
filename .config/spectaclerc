@@ -6,7 +6,7 @@ captureDelay=6
 captureMode=2
 cropRegion=0,0,0,0
 onClickChecked=false
-window-position=25,137
+window-position=17,52
 
 [KFileDialog Settings]
 Recent Files[$e]=file:$HOME/Pictures/passport.png,file:$HOME/Pictures/Screenshot_20200306_193921.png,file:$HOME/Pictures/Screenshot_20200306_193158.png

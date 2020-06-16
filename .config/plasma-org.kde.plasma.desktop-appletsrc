@@ -26,7 +26,7 @@ MidButton;NoModifier=org.kde.paste
 RightButton;NoModifier=org.kde.contextmenu
 
 [Containments][38]
-ItemGeometriesHorizontal=Applet-41:1472,32,96,96,0;
+ItemGeometriesHorizontal=Applet-41:1424,32,96,96,0;
 activityId=18f0f48d-de11-4251-8724-9c5602eb7c02
 formfactor=0
 immutability=1
@@ -40,7 +40,7 @@ immutability=1
 plugin=org.koffeinfriedhof.gealach
 
 [Containments][38][Applets][41][Configuration]
-PreloadWeight=0
+PreloadWeight=5
 
 [Containments][38][Applets][41][Configuration][ConfigDialog]
 DialogHeight=720
@@ -60,11 +60,11 @@ PreloadWeight=0
 [Containments][38][General]
 ToolBoxButtonState=topcenter
 ToolBoxButtonX=542
-ToolBoxButtonY=36
+ToolBoxButtonY=44
 showToolbox=false
 
 [Containments][38][Wallpaper][org.kde.image][General]
-Image=file:///home/steve/.config/variety/wallpaper/wallpaper-clock-7d700a2d24e8230944deaff4ccd30713.jpg
+Image=file:///home/steve/.config/variety/wallpaper/wallpaper-clock-6d5a754f454759dacf97ff11f053ee8c.jpg
 
 [Containments][38][Wallpaper][org.kde.potd][General]
 FillMode=2
