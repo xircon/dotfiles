@@ -4,3 +4,11 @@ ShadowStrength=120
 
 [Windeco]
 ButtonSize=2
+
+[Windeco Exception 0]
+BorderSize=2
+Enabled=true
+ExceptionPattern=.*
+ExceptionType=0
+HideTitleBar=true
+Mask=16

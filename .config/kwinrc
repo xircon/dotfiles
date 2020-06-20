@@ -108,6 +108,16 @@ wobblywindowsEnabled=true
 PopupHideDelay=1000
 TextOnly=true
 
+[Script-krohnkite]
+enableFloatingLayout=true
+enableQuarterLayout=true
+monocleMaximize=false
+screenGapBottom=1
+screenGapLeft=1
+screenGapRight=1
+screenGapTop=1
+tileLayoutGap=1
+
 [TabBox]
 ActivitiesMode=0
 ApplicationsMode=0
@@ -149,14 +159,14 @@ ElectricBorderDelay=150
 ElectricBorderMaximize=true
 ElectricBorderTiling=true
 ElectricBorders=0
-FocusPolicy=ClickToFocus
+FocusPolicy=FocusFollowsMouse
 FocusStealingPreventionLevel=1
 GeometryTip=false
 HideUtilityWindowsForInactive=true
 MaximizeButtonLeftClickCommand=Maximize
 MaximizeButtonMiddleClickCommand=Maximize (vertical only)
 MaximizeButtonRightClickCommand=Maximize (horizontal only)
-NextFocusPrefersMouse=false
+NextFocusPrefersMouse=true
 Placement=Centered
 RollOverDesktops=true
 SeparateScreenFocus=false

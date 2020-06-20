@@ -4,18 +4,20 @@
 profile-cleaner f
 
 notify-send Plasma-xcape "Script starting"
+
 setxkbmap -option "terminate:ctrl_alt_bksp"
 #setxkbmap -layout gb -option ctrl:swapcaps # Caps Lock is Control on a GB keyboard
+
 
 notify-send Plasma-xcape "Killing evdoublebind & xcape instances prior to relaunch"
 killall xcape &>/dev/null
 #killall evdoublebind &>/dev/null
 
-
 echo "peanuts"
 
 setxkbmap -option caps:none
 setxkbmap -option "shift:both_capslock"
+setxkbmap -option ctrl:nocaps
 
 ### Clear stale locks.
 rm -f ~/emacs.d/.emacs.desktop.lock
@@ -72,7 +74,5 @@ notify-send "Running xcape processes: " `pgrep -c xcape`
 sxhkd -c /home/steve/.config/sxhkd/plasma-sxkhdrc&
 
 notify-send "The end!"
-
-
 
 exit 0

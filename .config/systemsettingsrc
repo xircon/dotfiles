@@ -11,8 +11,8 @@ Height 900=480
 Width 1600=672
 
 [KFileDialog Settings]
-Recent Files[$e]=browser.sh,file:$HOME/scripts/emacs.sh,file:$HOME/scripts/dolphin.sh,file:$HOME/dotfiles/plasma-xcape.sh,file:$HOME/scripts/emf,file:$HOME/scripts/terminator.sh,file:$HOME/scripts/browser.sh
-Recent URLs[$e]=file:$HOME/scripts/
+Recent Files[$e]=browser.sh,file:$HOME/Downloads/Carl.colors,file:$HOME/scripts/emacs.sh,file:$HOME/scripts/dolphin.sh,file:$HOME/dotfiles/plasma-xcape.sh,file:$HOME/scripts/emf,file:$HOME/scripts/terminator.sh,file:$HOME/scripts/browser.sh
+Recent URLs[$e]=file:$HOME/Downloads/
 detailViewIconSize=0
 
 [KPropertiesDialog]
@@ -20,11 +20,11 @@ Height 900=444
 Width 1600=450
 
 [MainWindow]
-Height 900=856
+Height 900=868
 MenuBar=Disabled
-State=AAAA/wAAAAD9AAAAAAAABI4AAANYAAAABAAAAAQAAAAIAAAACPwAAAABAAAAAgAAAAEAAAAWAG0AYQBpAG4AVABvAG8AbABCAGEAcgAAAAAA/////wAAAAAAAAAA
+State=AAAA/wAAAAD9AAAAAAAABjYAAANkAAAABAAAAAQAAAAIAAAACPwAAAABAAAAAgAAAAEAAAAWAG0AYQBpAG4AVABvAG8AbABCAGEAcgAAAAAA/////wAAAAAAAAAA
 ToolBarsMovable=Disabled
-Width 1600=1166
+Width 1600=1590
 Window-Maximized 480x640=true
 
 [Open-with settings]
