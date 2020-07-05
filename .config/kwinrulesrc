@@ -19,7 +19,7 @@ clientmachine=localhost
 clientmachinematch=0
 position=46,0
 positionrule=4
-size=749,122
+size=792,899
 sizerule=4
 title=Kvantum Manager
 titlematch=0
@@ -39,6 +39,21 @@ wmclass=copyq
 wmclasscomplete=false
 wmclassmatch=1
 
+[4]
+Description=Settings for gl
+noborder=true
+noborderrule=2
+types=959
+wmclass=.*\\b(mpv)\\b.*
+wmclassmatch=3
+
+[5]
+Description=Settings for imv
+noborderrule=2
+types=959
+wmclass=imv
+wmclassmatch=1
+
 [Directories]
 dir_pixmap[$d]
 
@@ -46,7 +61,7 @@ dir_pixmap[$d]
 BrowserApplication[$d]
 ColorScheme[$d]
 Name[$d]
-count=3
+count=5
 fixed[$d]
 font[$d]
 menuFont[$d]

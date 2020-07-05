@@ -46,7 +46,7 @@ super + x
 hyper+w
 	sidebarh
 alt+f
-	sidebarh
+	~/scripts/browser.sh 
 
 alt+n
   variety -n
@@ -111,7 +111,8 @@ super + w
 	$TERMINAL -e sudo nmtui
 
 super + shift + w
-	$BROWSER
+    ~/scripts/browser.sh 
+#$BROWSER
 
 # Et cetera...
 super + grave

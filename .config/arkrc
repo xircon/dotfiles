@@ -99,12 +99,12 @@ Word Completion Remove Tail=true
 [MainWindow]
 Height 480=444
 Height 900=890
-State=AAAA/wAAAAD9AAAAAAAABjgAAAM6AAAABAAAAAQAAAAIAAAACPwAAAABAAAAAgAAAAEAAAAWAG0AYQBpAG4AVABvAG8AbABCAGEAcgEAAAAA/////wAAAAAAAAAA
-StatusBar=Disabled
+State=AAAA/wAAAAD9AAAAAAAABkAAAAL0AAAABAAAAAQAAAAIAAAACPwAAAABAAAAAgAAAAEAAAAWAG0AYQBpAG4AVABvAG8AbABCAGEAcgEAAAAA/////wAAAAAAAAAA
 ToolBarsMovable=Disabled
 Width 1600=1592
 Width 640=608
-splitterSizes=1250,335
+Window-Maximized 900x1600=true
+splitterSizes=1261,338
 
 [Open-with settings]
 CompletionMode=1
@@ -113,10 +113,10 @@ History=ark
 [Recent Files]
 File1[$e]=/home/media/Audio Books/DragonLance/DragonLance - Chronicles 01 - Dragons of Autumn Twilight.zip
 File2[$e]=$HOME/dotfiles/transfuse/steve_transfusion_T-20200111_2028.tar.gz
-File3[$e]=$HOME/Downloads/JYDGE.v1.2.1.0.rar
+File3[$e]=zip:///home/steve/Downloads/PhotoGIMP-1.0.zip/PhotoGIMP-1.0/PhotoGIMP by Diolinux v2020 for Flatpak.zip
 Name1[$e]=DragonLance - Chronicles 01 - Dragons of Autumn Twilight.zip
 Name2[$e]=steve_transfusion_T-20200111_2028.tar.gz
-Name3[$e]=JYDGE.v1.2.1.0.rar
+Name3[$e]=PhotoGIMP by Diolinux v2020 for Flatpak.zip
 
 [Viewer]
 Height 900=437

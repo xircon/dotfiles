@@ -21,6 +21,7 @@ Favorites=
 
 [General]
 BrowseThroughArchives=true
+ConfirmClosingMultipleTabs=false
 LockPanels=false
 ShowSelectionToggle=false
 SortingChoice=CaseInsensitiveSorting
@@ -31,19 +32,19 @@ ViewPropsTimestamp=2019,10,19,22,7,45
 FontWeight=50
 
 [KPropertiesDialog]
-Height 900=443
-Width 1600=392
+Height 900=647
+Width 1600=604
 
 [MainWindow]
 Height 480=450
 Height 600=564
 Height 768=668
-Height 900=786
+Height 900=727
 MenuBar=Disabled
-State=AAAA/wAAAAD9AAAAAwAAAAAAAADfAAADEvwCAAAAAvsAAAAWAGYAbwBsAGQAZQByAHMARABvAGMAawAAAAAA/////wAAAB0A////+wAAABQAcABsAGEAYwBlAHMARABvAGMAawEAAAAAAAADEgAAAG8A////AAAAAQAAAAAAAAAA/AIAAAAB+wAAABAAaQBuAGYAbwBEAG8AYwBrAAAAAAD/////AAAAHQD///8AAAADAAACvwAAANP8AQAAAAH7AAAAGAB0AGUAcgBtAGkAbgBhAGwARABvAGMAawAAAABAAAACvwAAADYA////AAADDwAAAxIAAAAEAAAABAAAAAgAAAAI/AAAAAEAAAAAAAAAAQAAABYAbQBhAGkAbgBUAG8AbwBsAEIAYQByAwAAAAD/////AAAAAAAAAAA=
+State=AAAA/wAAAAD9AAAAAwAAAAAAAADfAAAC1/wCAAAAAvsAAAAWAGYAbwBsAGQAZQByAHMARABvAGMAawAAAAAA/////wAAAB0A////+wAAABQAcABsAGEAYwBlAHMARABvAGMAawEAAAAAAAAC1wAAAG8A////AAAAAQAAAAAAAAAA/AIAAAAB+wAAABAAaQBuAGYAbwBEAG8AYwBrAAAAAAD/////AAAAHQD///8AAAADAAACvwAAANP8AQAAAAH7AAAAGAB0AGUAcgBtAGkAbgBhAGwARABvAGMAawAAAABAAAACvwAAADYA////AAADBwAAAtcAAAAEAAAABAAAAAgAAAAI/AAAAAEAAAAAAAAAAQAAABYAbQBhAGkAbgBUAG8AbwBsAEIAYQByAwAAAAD/////AAAAAAAAAAA=
 ToolBarsMovable=Disabled
 Width 1024=992
-Width 1600=1073
+Width 1600=1065
 Width 640=632
 Width 800=768
 
@@ -59,8 +60,8 @@ History=imv,ark
 Plugins=appimagethumbnail,audiothumbnail,blenderthumbnail,comicbookthumbnail,djvuthumbnail,ebookthumbnail,exrthumbnail,directorythumbnail,fontthumbnail,imagethumbnail,jpegthumbnail,kraorathumbnail,windowsexethumbnail,windowsimagethumbnail,opendocumentthumbnail,gsthumbnail,rawthumbnail,svgthumbnail,ffmpegthumbs
 
 [SettingsDialog]
-Height 900=474
-Width 1600=657
+Height 900=629
+Width 1600=682
 
 [Toolbar mainToolBar]
 IconSize=32

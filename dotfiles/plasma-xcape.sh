@@ -2,6 +2,7 @@
 # note - X11/keysymdef.h
 
 profile-cleaner f
+profile-cleaner v
 
 notify-send Plasma-xcape "Script starting"
 
@@ -31,7 +32,7 @@ xcape -e "Hyper_L=space" &
 #xcape -e 'Alt_L=Super_L|w'
 #xcape -e "Control_L=Super_L|t"&
 
-~/scripts/evdbsh &
+#~/scripts/evdbsh &
 
 killall running.bin
 
@@ -74,5 +75,7 @@ notify-send "Running xcape processes: " `pgrep -c xcape`
 sxhkd -c /home/steve/.config/sxhkd/plasma-sxkhdrc&
 
 notify-send "The end!"
+
+#/usr/bin/dbus-send --session --type=method_call --dest=org.freedesktop.ScreenSaver /ScreenSaver org.freedesktop.ScreenSaver.Lock &
 
 exit 0

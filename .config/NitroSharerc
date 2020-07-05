@@ -1,8 +1,8 @@
 [FileDialogSize]
 Height 900=480
-Width 1600=643
+Width 1600=662
 
 [KFileDialog Settings]
-Recent Files[$e]=Xmodmap,file:$HOME/dotfiles/Xmodmap
-Recent URLs[$e]=file:$HOME/dotfiles/
+Recent Files[$e]=Xmodmap,file:$HOME/xc,file:$HOME/dotfiles/Xmodmap
+Recent URLs[$e]=file:///usr/lib/python3.8/site-packages/spyder/
 detailViewIconSize=0

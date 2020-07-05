@@ -6,7 +6,7 @@ Autolock=false
 LockOnResume=false
 
 [Greeter]
-Theme=org.kde.breezedark.desktop
+Theme=com.github.vinceliuice.Qogir-dark
 
 [Greeter][Wallpaper][org.kde.image][General]
 Image=file:///usr/share/wallpapers/summer_1am/contents/images/1920x1080.jpg

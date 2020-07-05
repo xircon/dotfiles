@@ -18,7 +18,7 @@ Id_2=298fb705-84e4-46aa-b54d-c06d0dd1498b
 Id_3=47d7c679-25de-4676-8c3d-8fbbb7b0c0e9
 Id_4=82a5090b-05d1-46ce-bbbd-7ab2adcc05b3
 Number=4
-Rows=4
+Rows=1
 
 [DrmOutputs][d6b5549c29][d6b5549c29]
 Scale=1
@@ -92,7 +92,6 @@ LongitudeAuto=-1.584
 [Plugins]
 cubeEnabled=true
 cubeslideEnabled=true
-desktopchangeosdEnabled=true
 flipswitchEnabled=true
 highlightwindowEnabled=true
 krohnkiteEnabled=false
@@ -106,7 +105,6 @@ wobblywindowsEnabled=true
 
 [Script-desktopchangeosd]
 PopupHideDelay=1000
-TextOnly=true
 
 [Script-krohnkite]
 enableFloatingLayout=true
@@ -184,4 +182,4 @@ ButtonsOnRight=IAX
 CloseOnDoubleClickOnMenu=false
 ShowToolTips=true
 library=org.kde.kwin.aurorae
-theme=__aurorae__svg__Carl
+theme=__aurorae__svg__Flat-Remix-Dark

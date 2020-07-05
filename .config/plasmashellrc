@@ -1,3 +1,10 @@
+[ActionsWidget]
+ColumnState=AAAA/wAAAAAAAAABAAAAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAioAAAACAQAAAQAAAAAAAAAAAAAAAGT/////AAAAgQAAAAAAAAACAAAA+gAAAAEAAAAAAAABMAAAAAEAAAAAAAAD6AAAAABk
+
+[ConfigDialog]
+Height 900=625
+Width 1600=714
+
 [DownloadDialog Settings]
 Height 900=424
 Width 1600=700
@@ -6,9 +13,12 @@ Width 1600=700
 Height 900=480
 Width 1600=953
 
+[General]
+Number of Actions=0
+
 [KFileDialog Settings]
-Recent Files[$e]=1600x900_autumn-dawn.jpg,file:$HOME/Pictures/Cyberpunk-Tears-In-Rain-Live-Wallpaper-Free.mp4,file:$HOME/Pictures/clouds.gif,file:$HOME/Pictures/blade-runner.gif,file:$HOME/Pictures/sea.mp4,file:$HOME/Downloads/Cyberpunk-Tears-In-Rain-Live-Wallpaper-Free.mp4,file:$HOME/Downloads/Thief-Clocktower-Raining-Hd-Live-Wallpaper-id-3169.mp4,file:$HOME/Downloads/Baby-Dragon-Lava-2K-Live-Wallpaper.mp4,file:$HOME/Downloads/Zombie-Invasion-Live-Wallpaper-Free.mp4,file:$HOME/Downloads/Blue-Space-Blackhole-Free-Live-Wallpaper.mp4,file:$HOME/Pictures/norway.gif,file:$HOME/Pictures/fastnet.gif,file:$HOME/Downloads/awvbTKj - Imgur.gif,file:$HOME/Pictures/lava.gif,file:$HOME/Pictures/salt-lake.gif,file:$HOME/Pictures/thames.gif
-Recent URLs[$e]=file:$HOME/Pictures/
+Recent Files[$e]=1600x900_autumn-dawn.jpg,file:///usr/share/sounds/Oxygen-Im-Irc-Event.ogg,file:///usr/share/sounds/Oxygen-Im-Contact-In.ogg,file:$HOME/Pictures/Cyberpunk-Tears-In-Rain-Live-Wallpaper-Free.mp4,file:$HOME/Pictures/sea.mp4
+Recent URLs[$e]=file:///usr/share/sounds/
 detailViewIconSize=0
 
 [PlasmaRunnerManager]
@@ -79,7 +89,7 @@ panelVisibility=1
 maxLength=882
 minLength=882
 offset=0
-thickness=300
+thickness=48
 
 [PlasmaViews][Panel 42][Horizontal1600]
 thickness=48
@@ -95,6 +105,22 @@ thickness=48
 
 [PlasmaViews][Panel 43][Horizontal1600]
 thickness=48
+
+[PlasmaViews][Panel 62]
+alignment=2
+panelVisibility=2
+
+[PlasmaViews][Panel 62][Defaults]
+maxLength=802
+minLength=522
+offset=0
+thickness=26
+
+[PlasmaViews][Panel 62][Horizontal1600]
+maxLength=802
+minLength=522
+offset=0
+thickness=26
 
 [ScreenConnectors]
 0=eDP-1

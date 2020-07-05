@@ -1,7 +1,0 @@
-[General]
-authenticationMethod=1
-host=pop.gmail.com
-login=xirconuk@gmail.com
-name=POP3 Account
-port=995
-useSSL=true

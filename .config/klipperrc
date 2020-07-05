@@ -1,3 +1,4 @@
 [General]
-SyncClipboards=true
-Version=5.17.4
+IgnoreImages=false
+SelectionTextOnly=false
+Version=5.19.2

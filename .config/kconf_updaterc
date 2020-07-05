@@ -11,14 +11,14 @@ done=akregator-15.08-kickoff
 mtime=1591694858
 
 [delete_cursor_old_default_size.upd]
-ctime=1592328876
+ctime=1592941459
 done=DeleteCursorOldDefaultSize
-mtime=1592318610
+mtime=1592921026
 
 [disable_kmix.upd]
-ctime=1592328877
+ctime=1592941459
 done=PlasmaVolume_DisableKMixAutostart
-mtime=1592318900
+mtime=1592921335
 
 [filepicker.upd]
 ctime=1592219255
@@ -26,24 +26,24 @@ done=filepicker-remove-old-previews-entry
 mtime=1591623359
 
 [fonts_akregator.upd]
-ctime=1592328874
+ctime=1592941451
 done=Plasma_Fonts_Akregator
-mtime=1592317283
+mtime=1592919689
 
 [fonts_global.upd]
-ctime=1592328874
+ctime=1592941451
 done=Fonts_Global
-mtime=1592317283
+mtime=1592919689
 
 [fonts_global_toolbar.upd]
-ctime=1592328874
+ctime=1592941451
 done=Fonts_Global_Toolbar
-mtime=1592317283
+mtime=1592919689
 
 [fonts_kate.upd]
-ctime=1592328874
+ctime=1592941451
 done=Plasma_Fonts_Kate
-mtime=1592317283
+mtime=1592919689
 
 [gtkbreeze5.5.upd]
 ctime=1575821329
@@ -51,9 +51,9 @@ done=GTKBreeze5.5
 mtime=1575379688
 
 [gtkconfig.upd]
-ctime=1592328874
+ctime=1592941450
 done=gtk_theme
-mtime=1592318250
+mtime=1592920663
 
 [gwenview.upd]
 ctime=1591948824
@@ -61,9 +61,9 @@ done=SideBar_StatusBar_Rename,ImageView_AlphaBackgroundMode_Update,DeleteThumbna
 mtime=1591692260
 
 [icons_remove_effects.upd]
-ctime=1592328876
+ctime=1592941459
 done=IconsRemoveEffects
-mtime=1592318610
+mtime=1592921026
 
 [importwizard.upd]
 ctime=1591948814
@@ -85,9 +85,9 @@ ctime=1591948825
 mtime=1591696948
 
 [kde4breeze.upd]
-ctime=1592328872
+ctime=1592941447
 done=5.0KDE4Breeze_2
-mtime=1592316881
+mtime=1592919275
 
 [kget.upd]
 ctime=1591948826
@@ -132,38 +132,38 @@ done=korganizer-15.08-kickoff
 mtime=1591695569
 
 [krdb_libpathwipe.upd]
-ctime=1592328876
+ctime=1592941459
 done=LibraryPathWipeOut
-mtime=1592318610
+mtime=1592921026
 
 [krunnerglobalshortcuts.upd]
-ctime=1592328874
+ctime=1592941452
 done=5.17KRunnerGlobalShortcuts
-mtime=1592317329
+mtime=1592932692
 
 [krunnerplugins.upd]
-ctime=1592328874
+ctime=1592941452
 done=5.9KRunnerPlugins
-mtime=1592317329
+mtime=1592932692
 
 [kscreenlocker.upd]
-ctime=1592328874
-mtime=1592316735
+ctime=1592941451
+mtime=1592919125
 
 [ksmserver_update_loginMode_value.upd]
-ctime=1592328876
+ctime=1592941459
 done=ksmserver_update_loginMode_value_default_enum
-mtime=1592318610
+mtime=1592921026
 
 [kwin.upd]
-ctime=1592493817
+ctime=1592941451
 done=replace-scalein-with-scale,port-minimizeanimation-effect-to-js,port-scale-effect-to-js,port-dimscreen-effect-to-js,auto-bordersize,animation-speed
-mtime=1592316979
+mtime=1592919374
 
 [kwinrules.upd]
-ctime=1592493817
+ctime=1592941451
 done=replace-placement-string-to-enum
-mtime=1592316979
+mtime=1592919374
 
 [languagetool_kmail.upd]
 ctime=1591948826
@@ -199,9 +199,9 @@ done=spectacle-migrate-shortcuts
 mtime=1591692765
 
 [style_widgetstyle_default_breeze.upd]
-ctime=1592328876
+ctime=1592941459
 done=StyleWidgetStyleDefaultBreeze
-mtime=1592318610
+mtime=1592921026
 
 [tellico-rename.upd]
 ctime=1591288029

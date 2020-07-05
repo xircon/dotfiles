@@ -28,7 +28,9 @@ opp() {
  sed -i "$str $1" ~/.config/alacritty/alacritty.yml && touch ~/.config/alacritty/alacritty.yml
 }
 
-alias cat=bat
+alias sd="sudo"
+
+alias cat=vim
 alias ecat="mm "
 alias catp="bat --plain"
 alias zshconfig="mate ~/.zshrc"
@@ -90,6 +92,7 @@ alias yup1="sudo pacman -Sy archlinux-keyring manjaro-keyring --noconfirm python
 
 alias yyp="sudo pacman -Ss "
 alias yyr="trizen -R"
+alias yyd="sudo pacman -Rdd"
 alias yrt="trizen"
 alias yys="trizen -Si "
 alias yyi="trizen -Qi "
@@ -201,6 +204,7 @@ alias wxfb=" GTK2_RC_FILES=/usr/share/themes/Yaru-Grey/gtk-2.0/gtkrc wxformbuild
 alias pmm="sudo pacman-mirrors -f"
 alias spac="sudo pacman -Syyu"
 alias updev="trizen -Syyua --devel -q --needed --noconfirm"
+alias movies="cd /home/media/Movies/"
 
 alias rm0b="find -name 'file*' -size 0 -delete"
 
@@ -321,6 +325,14 @@ alias gitup="cd ~/dotfiles && git push --all -u origin && git add * && git commi
 alias map="telnet mapscii\.me"
 alias g="googler "
 alias wgetp="wgetpaste -c gists "
+#alias wk="wikicurses"
+alias sshw="imv -r `pwd`"
+
+wk(){
+    str="'$*'"
+    #echo $str    
+    wikicurses $str    
+}
 
 # gcalcli
 alias a="gcalcli agenda"

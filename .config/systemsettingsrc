@@ -11,22 +11,22 @@ Height 900=480
 Width 1600=672
 
 [KFileDialog Settings]
-Recent Files[$e]=browser.sh,file:$HOME/Downloads/Carl.colors,file:$HOME/scripts/emacs.sh,file:$HOME/scripts/dolphin.sh,file:$HOME/dotfiles/plasma-xcape.sh,file:$HOME/scripts/emf,file:$HOME/scripts/terminator.sh,file:$HOME/scripts/browser.sh
-Recent URLs[$e]=file:$HOME/Downloads/
+Recent Files[$e]=file:$HOME/rules.kwinrule,file:///usr/share/pixmaps/faces/ap.jpg,file:$HOME/Pictures/ap.jpg,file:$HOME/scripts/emacs.sh,file:$HOME/scripts/dolphin.sh,file:$HOME/dotfiles/plasma-xcape.sh,file:$HOME/scripts/emf,file:$HOME/scripts/terminator.sh,file:$HOME/scripts/browser.sh
+Recent URLs[$e]=file:///usr/share/pixmaps/faces/
 detailViewIconSize=0
 
 [KPropertiesDialog]
-Height 900=444
-Width 1600=450
+Height 900=528
+Width 1600=518
 
 [MainWindow]
-Height 900=868
+Height 900=724
 MenuBar=Disabled
-State=AAAA/wAAAAD9AAAAAAAABjYAAANkAAAABAAAAAQAAAAIAAAACPwAAAABAAAAAgAAAAEAAAAWAG0AYQBpAG4AVABvAG8AbABCAGEAcgAAAAAA/////wAAAAAAAAAA
+State=AAAA/wAAAAD9AAAAAAAABXMAAALUAAAABAAAAAQAAAAIAAAACPwAAAABAAAAAgAAAAEAAAAWAG0AYQBpAG4AVABvAG8AbABCAGEAcgAAAAAA/////wAAAAAAAAAA
 ToolBarsMovable=Disabled
-Width 1600=1590
+Width 1600=1395
 Window-Maximized 480x640=true
 
 [Open-with settings]
 CompletionMode=1
-History=sxhkd,emacs,greenclip,clipmenud,plan,connman-gtk,nex,latt,var,aut,alb
+History=ksn,ula,sxhkd,emacs,greenclip,clipmenud,plan,connman-gtk,nex,latt,var,aut,alb

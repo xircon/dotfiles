@@ -5,7 +5,10 @@ Enabled=true
 Delay=0.7
 
 [Theme]
-name=sweet-dark
+name=Gently
+
+[Theme-plasmathemeexplorer]
+name=Maia_Transparent
 
 [Wallpapers]
 usersWallpapers=/home/steve/wallpaper/johannes-plenio-2QUvkQTBh5s-unsplash.jpg,/home/steve/wallpaper/1600x900_autumn-dawn.jpg

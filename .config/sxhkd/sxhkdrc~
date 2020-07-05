@@ -92,7 +92,7 @@ super + n
 super + c
    rofi -show calc -modi calc -no-show-match -no-sort
 
-super + b
+hyper + b
    buku_run
    
 #super + v
