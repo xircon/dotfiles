@@ -91,10 +91,10 @@ LongitudeAuto=-1.584
 
 [Plugins]
 cubeEnabled=true
-cubeslideEnabled=true
 flipswitchEnabled=true
 highlightwindowEnabled=true
 krohnkiteEnabled=false
+kwin4_effect_fadedesktopEnabled=true
 minimizeallEnabled=false
 slideEnabled=false
 synchronizeskipswitcherEnabled=false

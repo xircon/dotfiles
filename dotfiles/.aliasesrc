@@ -280,6 +280,9 @@ alias calendar=' vim -c "Calendar"'
 ### xcape:
 alias pxce="/home/steve/.config/autostart-scripts/plasma-xcape.sh"
 alias space='xcape -e "Hyper_L=space"'
+alias ud+="sudo systemctl start udevmon"
+alias ud-="sudo systemctl stop udevmon"
+
 
 rkbd () {
     killall xcape || true

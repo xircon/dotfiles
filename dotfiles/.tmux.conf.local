@@ -307,7 +307,7 @@ bind-key -n F4 copy-mode
 bind a send "e ~/.config/alacritty/alacritty.yml" C-m
 #bind h send "htop" C-m
 bind k send "kitty -e tmux" C-m
-bind u send "yyup" C-m
+bind u send "mm ~/.dual-function-keys.yaml /etc/udevmon.yaml" C-m
 #bind m send "xirconuk@gmail.com"
 bind g send "ranger" C-m
 
