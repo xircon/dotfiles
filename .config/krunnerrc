@@ -1,5 +1,5 @@
 [General]
-history=colo,glo,rul,swee,albert#,albert,mate,ala,greenclip daemon,reboot,rofi -dmenu&,dmenu,rofi -dmenu,glava,my,au,kill aut,kv,kill sys,varie,plasmashell,connm,cmst -w5,alber,xkill,latte-dock,eboot,emacsclient,spe,gis,cop,/usr/bin/st,reboo,al,latte,lat,st
+history=kwin_x11 --replace,colo,glo,rul,swee,albert#,albert,mate,ala,greenclip daemon,reboot,rofi -dmenu&,dmenu,rofi -dmenu,glava,my,au,kill aut,kv,kill sys,varie,plasmashell,connm,cmst -w5,alber,xkill,latte-dock,eboot,emacsclient,spe,gis,cop,/usr/bin/st,reboo,al,latte,lat,st
 
 [PlasmaRunnerManager]
 LaunchCounts=1 services_org.kde.latte-dock.desktop,2 services_albert.desktop

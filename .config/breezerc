@@ -1,14 +1,2 @@
 [Common]
-ShadowColor=85,0,255
-ShadowStrength=120
-
-[Windeco]
-ButtonSize=2
-
-[Windeco Exception 0]
-BorderSize=2
-Enabled=false
-ExceptionPattern=.*
-ExceptionType=0
-HideTitleBar=true
-Mask=16
+OutlineCloseButton=false

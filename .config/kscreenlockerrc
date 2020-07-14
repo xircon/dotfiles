@@ -6,7 +6,7 @@ Autolock=false
 LockOnResume=false
 
 [Greeter]
-Theme=com.github.vinceliuice.Qogir-dark
+Theme=com.github.varlesh.arc-dark
 
 [Greeter][Wallpaper][org.kde.image][General]
-Image=file:///usr/share/wallpapers/summer_1am/contents/images/1920x1080.jpg
+Image=/home/steve/wallpaper/1600x900_autumn-dawn.jpg

@@ -1,1 +1,1 @@
-/home/steve/dotfiles/.zshrc
+/home/steve/dotfiles/my_zshrc

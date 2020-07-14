@@ -17,8 +17,8 @@ Width 1600=953
 Number of Actions=0
 
 [KFileDialog Settings]
-Recent Files[$e]=1600x900_autumn-dawn.jpg,file:///usr/share/sounds/Oxygen-Im-Irc-Event.ogg,file:///usr/share/sounds/Oxygen-Im-Contact-In.ogg,file:$HOME/Pictures/Cyberpunk-Tears-In-Rain-Live-Wallpaper-Free.mp4,file:$HOME/Pictures/sea.mp4
-Recent URLs[$e]=file:///usr/share/sounds/
+Recent Files[$e]=1600x900_autumn-dawn.jpg,file:$HOME/Downloads/dynamic/Night.heic,file:$HOME/Downloads/Night CET v2.heic,file:$HOME/Downloads/Minimal Forest [FIXED].heic,file:///usr/share/sounds/Oxygen-Im-Irc-Event.ogg,file:///usr/share/sounds/Oxygen-Im-Contact-In.ogg
+Recent URLs[$e]=file:$HOME/Downloads/dynamic/
 detailViewIconSize=0
 
 [PlasmaRunnerManager]
@@ -121,6 +121,21 @@ maxLength=802
 minLength=522
 offset=0
 thickness=26
+
+[PlasmaViews][Panel 97]
+panelVisibility=1
+
+[PlasmaViews][Panel 97][Defaults]
+maxLength=76
+minLength=76
+offset=0
+thickness=36
+
+[PlasmaViews][Panel 97][Horizontal1600]
+maxLength=76
+minLength=76
+offset=0
+thickness=36
 
 [ScreenConnectors]
 0=eDP-1

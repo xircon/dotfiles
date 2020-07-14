@@ -1,6 +1,9 @@
 [Applications][bluemail]
 Seen=true
 
+[Applications][com.nextcloud.desktopclient.nextcloud]
+Seen=true
+
 [Applications][discord]
 Seen=true
 

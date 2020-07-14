@@ -3,3 +3,6 @@
 	name = Steve Fisher
 [credential]
 	helper = store
+[alias]
+	co = checkout
+	st = status

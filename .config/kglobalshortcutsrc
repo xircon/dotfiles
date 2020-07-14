@@ -62,7 +62,7 @@ Lock Session=Meta+L\tCtrl+Alt+L\tScreensaver,Meta+L\tCtrl+Alt+L\tScreensaver,Loc
 Log Out=Ctrl+Alt+Del,none,Log Out
 Log Out Without Confirmation=Ctrl+Alt+Shift+Del,none,Log Out Without Confirmation
 Reboot Without Confirmation=Ctrl+Alt+Shift+PgUp,none,Reboot Without Confirmation
-_k_friendly_name=Session Management
+_k_friendly_name=System Settings
 
 [kwin]
 Activate Window Demanding Attention=Ctrl+Alt+A,Ctrl+Alt+A,Activate Window Demanding Attention
@@ -265,7 +265,7 @@ activate entry 6=none,Meta+6,Activate Entry 6
 activate entry 7=none,Meta+7,Activate Entry 7
 activate entry 8=none,Meta+8,Activate Entry 8
 activate entry 9=none,Meta+9,Activate Entry 9
-activate widget 385=Alt+F1,none,Activate Application Menu Widget
+activate widget 385=,none,Activate Application Menu Widget
 clear-history=none,none,Clear Clipboard History
 clipboard_action=Ctrl+Alt+X,Ctrl+Alt+X,Enable Clipboard Actions
 cycleNextAction=none,none,Next History Item
@@ -348,6 +348,7 @@ activate task manager entry 7=,Meta+7,Activate Task Manager Entry 7
 activate task manager entry 8=,Meta+8,Activate Task Manager Entry 8
 activate task manager entry 9=,Meta+9,Activate Task Manager Entry 9
 activate widget 42=none,none,Activate Split Digital Clock Widget
+activate widget 99=Alt+F1,none,Activate Application Menu Widget
 clear-history=none,none,Clear Clipboard History
 clipboard_action=,Ctrl+Alt+X,Enable Clipboard Actions
 cycleNextAction=none,none,Next History Item
