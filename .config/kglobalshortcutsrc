@@ -34,7 +34,7 @@ _k_friendly_name=KDE Daemon
 {725b3881-9115-4b18-9209-f74f4b8ea8e2}=Meta+E,none,Emacs
 {9555bbbf-771c-49af-8085-b10b22791c17}=Meta+Num+-,none,bopm
 {9bd4a530-52e8-4a14-9b1a-94e86a3767d1}=Alt+N,none,variety next
-{b28f8d7b-0698-4406-a16f-821c9879343b}=Alt+C,none,minetime
+{b28f8d7b-0698-4406-a16f-821c9879343b}=Meta+C,none,minetime
 {b390c665-361d-4a1b-aa97-672921a0adc8}=Meta+S,none,settings
 {d03619b6-9b3c-48cc-9d9c-a2aadb485550}=none,none,Search
 {effaa765-4738-46e6-b9cd-40706a4e4f59}=Meta+V,none,New Action
@@ -62,7 +62,7 @@ Lock Session=Meta+L\tCtrl+Alt+L\tScreensaver,Meta+L\tCtrl+Alt+L\tScreensaver,Loc
 Log Out=Ctrl+Alt+Del,none,Log Out
 Log Out Without Confirmation=Ctrl+Alt+Shift+Del,none,Log Out Without Confirmation
 Reboot Without Confirmation=Ctrl+Alt+Shift+PgUp,none,Reboot Without Confirmation
-_k_friendly_name=System Settings
+_k_friendly_name=Session Management
 
 [kwin]
 Activate Window Demanding Attention=Ctrl+Alt+A,Ctrl+Alt+A,Activate Window Demanding Attention
@@ -110,6 +110,7 @@ MoveZoomDown=none,none,Move Zoomed Area Downwards
 MoveZoomLeft=none,none,Move Zoomed Area to Left
 MoveZoomRight=none,none,Move Zoomed Area to Right
 MoveZoomUp=none,none,Move Zoomed Area Upwards
+Parachute=Meta+Ctrl+D,none,Parachute
 Setup Window Shortcut=none,none,Setup Window Shortcut
 Show Desktop=Meta+D,Meta+D,Show Desktop
 ShowDesktopGrid=Ctrl+F8,Ctrl+F8,Show Desktop Grid

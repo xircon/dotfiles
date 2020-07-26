@@ -3,6 +3,6 @@ Height 900=480
 Width 1600=982
 
 [KFileDialog Settings]
-Recent Files[$e]=clear-32050-live-desktop.iso,file:$HOME/Downloads/ISO images/pacbang-2020.02.21.iso
-Recent URLs[$e]=file:$HOME/Downloads/ISO images/
+Recent Files[$e]=clear-32050-live-desktop.iso,file:$HOME/Downloads/torrent/endeavouros-2020.07.15-x86_64.iso,file:$HOME/Downloads/KaOS-2020.07-x86_64.iso,file:$HOME/Downloads/ISO images/pacbang-2020.02.21.iso
+Recent URLs[$e]=file:$HOME/Downloads/torrent/
 detailViewIconSize=0

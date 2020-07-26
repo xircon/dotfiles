@@ -3,7 +3,7 @@ Height 900=271
 Width 1600=312
 
 [DownloadDialog Settings]
-Height 900=424
+Height 900=504
 Width 1600=700
 
 [FileDialogSize]
@@ -22,12 +22,11 @@ Width 1600=518
 [MainWindow]
 Height 900=709
 MenuBar=Disabled
-State=AAAA/wAAAAD9AAAAAAAABkAAAANrAAAABAAAAAQAAAAIAAAACPwAAAABAAAAAgAAAAEAAAAWAG0AYQBpAG4AVABvAG8AbABCAGEAcgAAAAAA/////wAAAAAAAAAA
+State=AAAA/wAAAAD9AAAAAAAABMkAAALFAAAABAAAAAQAAAAIAAAACPwAAAABAAAAAgAAAAEAAAAWAG0AYQBpAG4AVABvAG8AbABCAGEAcgAAAAAA/////wAAAAAAAAAA
 ToolBarsMovable=Disabled
-Width 1600=1024
+Width 1600=1225
 Window-Maximized 480x640=true
-Window-Maximized 900x1600=true
 
 [Open-with settings]
 CompletionMode=1
-History=ksn,ula,sxhkd,emacs,greenclip,clipmenud,plan,connman-gtk,nex,latt,var,aut,alb
+History=tou,plan,ksn,ula,sxhkd,emacs,greenclip,clipmenud,connman-gtk,nex,latt,var,aut,alb

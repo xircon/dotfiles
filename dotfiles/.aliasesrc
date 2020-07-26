@@ -30,11 +30,11 @@ opp() {
 
 alias sd="sudo"
 
-alias cat=vim
+alias cat=bat
+alias vc=vim
 alias ecat="mm "
 alias catp="bat --plain"
 alias zshconfig="mate ~/.zshrc"
-# alias ohmyzsh="mate ~/.oh-my-zsh"
 alias killx="setxkbmap -option terminate:ctrl_alt_bksp"
 alias blame="systemd-analyze blame"
 alias cx='chmod +x'
@@ -49,17 +49,18 @@ alias updatedb="time sudo updatedb"
 alias dloc="drill-search-cli"
 alias locate="locate -ie"
 alias loc="locate -ie"
-alias tst="test\ntest\ntest\n"
+
 locg(){
     locate -ie $1 | grep -i $2
 }
-#alias lse="se `locate $1 | fzf -e +s --reverse`"
+
 le(){
     tf=`locate $1 | fzf -e +s --reverse`
     if [ "$tf" != "" ]; then
-   		 micro $tf
+   		 vim $tf
     fi
 }
+
 alias spectre="dmesg | grep microcode  && sudo spectre-meltdown-checker"
 alias gpgrk="gpg --recv-key "
 #alias yup="date && time trizen -Syyua --noconfirm"
@@ -74,21 +75,6 @@ alias syuu="sudo pacman-mirrors -f5 && sudo pacman -Syyuu"
 alias mirrors="sudo pacman-mirrors -f5"
 alias updates="sudo pacman -Qu"
 alias yup1="sudo pacman -Sy archlinux-keyring manjaro-keyring --noconfirm python2 | grep -i installed  && date && trizen -Syyua --noconfirm"
-#alias up?="update-notifier"
-#alias yy="trizen "
-
-# yy() {
-#     trizen $1 $2 --noconfirm
-# }
-# a=${a%$'\r'}
-# yyc() {
-#     a=`xclip -o`
-#     a=${a%$'\r'}
-#     echo $a
-#     trizen $a
-# }
-
-#alias yyc="trizen `xclip -o`"
 
 alias yyp="sudo pacman -Ss "
 alias yyr="trizen -R"
@@ -281,6 +267,7 @@ alias calendar=' vim -c "Calendar"'
 alias pxce="/home/steve/.config/autostart-scripts/plasma-xcape.sh"
 alias space='xcape -e "Hyper_L=space"'
 alias ud+="sudo systemctl start udevmon"
+alias ud++="ud- && sleep 2 && ud+ && systemctl status udevmon"
 alias ud-="sudo systemctl stop udevmon"
 
 

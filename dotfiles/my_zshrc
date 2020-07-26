@@ -8,7 +8,7 @@ export EDITOR
 
 # https://github.com/ohmyzsh/ohmyzsh/tree/master/plugins/dircycle
 # ctrl+shift+left/right
-plugins=(dircycle autojump alias-tips)
+plugins=(dircycle autojump alias-tips zsh-256color)
 
 # Autopair:
 if [[ ! -d ~/.zsh-autopair ]]; then
@@ -183,8 +183,8 @@ SPACESHIP_TIME_FORMAT="%D{%Y-%m-%d} %B%F{blue}%T"
 
 bindkey "${terminfo[khome]}" beginning-of-line
 bindkey "${terminfo[kend]}" end-of-line
-bindkey "^[[1;5C" forward-word
-bindkey "^[[1;5D" backward-word
+#bindkey "^[[1;5C" forward-word
+#bindkey "^[[1;5D" backward-word
 
 #gnome-shell-extension-tool -e run-or-raise@edvard.cz &> /dev/null
 

@@ -19,6 +19,7 @@ echo "peanuts"
 setxkbmap -option caps:none
 setxkbmap -option "shift:both_capslock"
 setxkbmap -option ctrl:nocaps
+#setxkbmap -option "caps:hyper"
 
 ### Clear stale locks.
 rm -f ~/emacs.d/.emacs.desktop.lock

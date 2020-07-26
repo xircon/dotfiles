@@ -19,6 +19,9 @@ Seen=true
 [Applications][mailspring_mailspring]
 Seen=true
 
+[Applications][org.gnome.boxes]
+Seen=true
+
 [Applications][org.gnome.dejadup]
 Seen=true
 
